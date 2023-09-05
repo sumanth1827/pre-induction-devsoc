@@ -42,7 +42,7 @@ public class playermovement : MonoBehaviour
             sprite.flipX = true;
         }
         anim.SetBool("jump", grounded);
-        if (Input.GetKeyDown("space") && grounded)
+        if ((Input.GetKeyDown("space") || Input.GetKeyDown("up")) && grounded)
         {
             
             rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
