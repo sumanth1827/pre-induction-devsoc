@@ -29,9 +29,11 @@ public class playermovement : MonoBehaviour
 
     float time = 0f;
     float powertime;
-    float maxpowertime;
+    float maxpowertime = 5f;
     [SerializeField] GameObject paperball;
     float launchspeed = 20f;
+    Vector2 mouseposition;
+    Vector2 maindirection;
 
     // Start is called before the first frame update
     private void Awake()
@@ -58,6 +60,9 @@ public class playermovement : MonoBehaviour
         }
         walkInput = Input.GetAxisRaw("Horizontal");
         speed = grounded ? groundspeed : airspeed;
+        mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 pos = transform.position;
+        maindirection = mouseposition - pos;
         if(walkInput > 0 )
         {
             sprite.flipX = false;
@@ -83,11 +88,10 @@ public class playermovement : MonoBehaviour
             StartCoroutine(Dashing());
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             time += Time.deltaTime;
-            GameObject newball = Instantiate(paperball, transform.position, transform.rotation);
-            newball.GetComponent<Rigidbody2D>().velocity = new Vector2( direction*launchspeed, newball.GetComponent<Rigidbody2D>().velocity.y);
+
 
         }
         if(Input.GetMouseButtonUp(0))
@@ -100,10 +104,16 @@ public class playermovement : MonoBehaviour
             {
                 powertime = time;
             }
-            
+            float force;
+            force = shoot(powertime);
+            Debug.Log(shoot(powertime));
+            GameObject newball = Instantiate(paperball, transform.position, transform.rotation);
+
+            newball.GetComponent<Rigidbody2D>().velocity = maindirection*force;
+
             time = 0;
         }
-
+    
 
     }
     private void FixedUpdate()
@@ -150,5 +160,13 @@ public class playermovement : MonoBehaviour
         isdashing = false;
         yield return new WaitForSeconds(dashingcooldown);
         candash = true;
+    }
+
+    private float shoot(float powertime)
+    {
+        float force;
+        force = 5f + powertime*launchspeed;
+        return force;
+
     }
 }
