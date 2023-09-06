@@ -63,6 +63,7 @@ public class playermovement : MonoBehaviour
         mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 pos = transform.position;
         maindirection = mouseposition - pos;
+        
         if(walkInput > 0 )
         {
             sprite.flipX = false;
@@ -109,7 +110,7 @@ public class playermovement : MonoBehaviour
             Debug.Log(shoot(powertime));
             GameObject newball = Instantiate(paperball, transform.position, transform.rotation);
 
-            newball.GetComponent<Rigidbody2D>().velocity = maindirection*force;
+            newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized*force;
 
             time = 0;
         }
@@ -147,12 +148,7 @@ public class playermovement : MonoBehaviour
         isdashing = true;
         float grav = rb.gravityScale;
         rb.gravityScale = 0f;
-
-        rb.velocity = new Vector2(direction*dashingpower, 0f);
-      
-       
-        
-
+        rb.velocity = new Vector2(direction*dashingpower, 0f);    
         dashtrail.emitting = true;
         yield return new WaitForSeconds(dashingtime);
         dashtrail.emitting = false;
