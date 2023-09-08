@@ -182,5 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPos: {x: -7.166339, y: -2.19, z: 0}
-  speed: 10
+  speed: 15
   arcHeight: 1

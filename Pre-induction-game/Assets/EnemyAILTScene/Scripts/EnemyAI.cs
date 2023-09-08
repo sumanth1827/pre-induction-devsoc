@@ -38,7 +38,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        if(col.collider.tag == "PlayerAttack"){
+        if(col.collider.tag == "PlayerAttack" && health > 0){
             health -= 10;
         }
     }

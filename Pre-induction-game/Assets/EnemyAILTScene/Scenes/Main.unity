@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 442091271}
   m_Layer: 0
   m_Name: Chalk Point
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,7 +437,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prof: {fileID: 1639631923}
   questions: {fileID: 4393012061433102060, guid: 7d2f0f43b0bfe5845b2c63d950f8cfbf, type: 3}
-  speed: 5
+  speed: 10
   maxY: 4.5
   minY: -4.5
   maxT: 8

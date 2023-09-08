@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
+using Microlight.MicroBar;
 
 public class playermovement : MonoBehaviour
 {
+    public int health = 5;
+    public Text healthtext;
     public static playermovement instance;
 
-
+    //movement:
     Rigidbody2D rb;
     float walkInput;
     [SerializeField] float airspeed = 9f, groundspeed = 7f, walkDeceleration = 20f, jumpforce = 15f;
@@ -21,20 +24,23 @@ public class playermovement : MonoBehaviour
     [SerializeField] LayerMask ground;
     Transform groundcheck;
 
-
+    //dashing
     bool candash = true, isdashing;
     [SerializeField] float dashingpower = 24f;
     float dashingtime = 0.1f;
     float dashingcooldown = 0.5f;
     TrailRenderer dashtrail;
 
+    //shooting
     float time = 0f;
     float powertime;
-    float maxpowertime = 5f;
+    float maxpowertime = 0.5f;
+    bool isloading;
     [SerializeField] GameObject paperball;
     float launchspeed = 20f;
     Vector2 mouseposition;
     Vector2 maindirection;
+    [SerializeField] MicroBar launchbar;
 
     // Start is called before the first frame update
     private void Awake()
@@ -44,12 +50,13 @@ public class playermovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         groundcheck = GetComponentsInChildren<Transform>()[1];
         dashtrail = GetComponent<TrailRenderer>();
+        launchbar.Initialize(20f);
 
     }
     void Start()
     {
         instance = this;
-        
+        launchbar.UpdateHealthBar(0f, true);
     }
 
     // Update is called once per frame
@@ -77,12 +84,8 @@ public class playermovement : MonoBehaviour
         }
         anim.SetBool("jump", grounded);
         if (Input.GetKeyDown("space") && grounded)
-        {
-            
+        {           
             rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
-            
-            //rb.velocity = new Vector2(rb.velocity.x, 15f);
-            //grounded = false;
         }
  
         if(Input.GetKeyDown(KeyCode.LeftShift) && candash)
@@ -90,32 +93,37 @@ public class playermovement : MonoBehaviour
             StartCoroutine(Dashing());
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            time += Time.deltaTime;
-
-
+            time = Time.time;
+            isloading = true;
         }
+        if(isloading)
+        {
+            float holdtime  = Time.time - time;
+            launchbar.UpdateHealthBar(shoot(holdtime)-15f,true);
+        }
+        
         if(Input.GetMouseButtonUp(0))
         {
-            if(time> maxpowertime)
+            // Debug.Log(Time.time - time);
+            if ((Time.time - time) > maxpowertime)
             {
                 powertime = maxpowertime;
             }
             else
             {
-                powertime = time;
+                powertime = Time.time - time;
             }
             float force;
             force = shoot(powertime);
             // Debug.Log(shoot(powertime));
-            GameObject newball = Instantiate(paperball, transform.position, transform.rotation);
-
+            GameObject newball = Instantiate(paperball, transform.position, transform.rotation);           
             newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized*force;
-
-            time = 0;
+            isloading = false;
+            launchbar.UpdateHealthBar(0f, true);
         }
-
+    
 
     }
     private void FixedUpdate()
@@ -141,6 +149,8 @@ public class playermovement : MonoBehaviour
             }
         }
 
+        healthtext.text = health.ToString();
+
     }
 
     private IEnumerator Dashing()
@@ -162,8 +172,16 @@ public class playermovement : MonoBehaviour
     private float shoot(float powertime)
     {
         float force;
-        force = 5f + powertime*launchspeed;
+        float holdtimenormalized = Mathf.Clamp01(powertime / maxpowertime);
+        force = 15f + (holdtimenormalized * launchspeed);
+        
         return force;
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D col){
+        if(col.tag == "Attack"){
+            health--;
+        }
     }
 }

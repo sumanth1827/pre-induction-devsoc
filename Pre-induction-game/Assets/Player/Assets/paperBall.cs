@@ -2,28 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class paperBall : MonoBehaviour
+public class paperball : MonoBehaviour
 {
+    Rigidbody2D rb;
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(des());
+        rb = GetComponent<Rigidbody2D>();   
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D col){
-        if(col.collider.tag == "Enemy"){
-            Destroy(gameObject);
+        if (rb.velocity == Vector2.zero)
+        {
+            anim.enabled = false;
+            StartCoroutine(delete());
         }
     }
-
-    IEnumerator des(){
-        yield return new WaitForSeconds(5f);
-        Destroy(gameObject);
+    private IEnumerator delete()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject);    
     }
+
+    private void OnCollisionEnter2D(Collision2D col){
+        if(col.collider.tag == "PlayerAttack"){
+            Destroy(gameObject);
+        }
+    } 
 }
