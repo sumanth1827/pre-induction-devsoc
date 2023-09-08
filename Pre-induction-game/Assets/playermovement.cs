@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 public class playermovement : MonoBehaviour
 {
     public static playermovement instance;
 
-
+    couples couple;
     Rigidbody2D rb;
     float walkInput;
     [SerializeField] float airspeed = 9f, groundspeed = 7f, walkDeceleration = 20f, jumpforce = 15f;
     bool grounded = false;
+    public bool hit=false;
+    Collider2D isHit;
     float speed;
     Animator anim;
     int direction = 1;
 
     SpriteRenderer sprite;
     [SerializeField] LayerMask ground;
+    [SerializeField] LayerMask couples;
     Transform groundcheck;
 
 
@@ -33,6 +37,7 @@ public class playermovement : MonoBehaviour
     [SerializeField] GameObject paperball;
     float launchspeed = 20f;
 
+[SerializeField] float bounce = 50f;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -45,6 +50,7 @@ public class playermovement : MonoBehaviour
     }
     void Start()
     {
+        
         instance = this;
         
     }
@@ -52,9 +58,17 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
         if (isdashing)
         {
             return;
+        }
+        isHit = Physics2D.OverlapCircle(groundcheck.position, 0.2f, couples);
+        if(isHit!=null)
+        {
+            isHit.gameObject.GetComponent<couples>().hit = true;
+            rb.AddForce(Vector2.up*bounce,ForceMode2D.Impulse);
         }
         walkInput = Input.GetAxisRaw("Horizontal");
         speed = grounded ? groundspeed : airspeed;
