@@ -31,6 +31,10 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate(){
         aggro = anim.GetBool("isAggro");
         healthText.text = health.ToString();
+        if(health <= 0){
+            anim.SetBool("isDefeated",true);
+            Destroy(gameObject, 4f);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D col){
