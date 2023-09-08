@@ -7,6 +7,7 @@ public class ChalkGeneration : MonoBehaviour
     public Transform origin;
     public GameObject chalk;
     public EnemyAI enemyAI;
+    public Animator enemyAnim;
     public float minX;
     public float maxX;
     public float timeBetweenSpawn = 2f;
@@ -24,7 +25,7 @@ public class ChalkGeneration : MonoBehaviour
     void FixedUpdate()
     {
         if (enemyAI != null) {
-            if(!enemyAI.aggro){
+            if(!enemyAI.aggro && !enemyAnim.GetBool("isDefeated")){
                 if(Time.time > spawntime){
                     spawn();
                     spawntime = Time.time + timeBetweenSpawn;
