@@ -10,29 +10,33 @@ public class ChalkGeneration : MonoBehaviour
     public float maxX;
     public float timeBetweenSpawn = 2f;
     private float spawntime;
+    private GameObject player;
+    private Transform playerTr;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerTr = player.GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (enemyAI != null) {
-            if(enemyAI.aggro){
+            // if(!enemyAI.aggro){
                 if(Time.time > spawntime){
                     spawn();
                     spawntime = Time.time + timeBetweenSpawn;
                 }
-            }
+            // }
         }
     }
 
     private void spawn(){
-        float randomX = Random.Range(minX, maxX);
         var c = Instantiate(chalk, transform.position, transform.rotation);
         Chalk cb = c.GetComponent<Chalk>();
-        cb.targetPos = new Vector3(randomX, transform.position.y - 2, 0);
+        cb.targetPos = new Vector3(playerTr.position.x, playerTr.position.y, 0);
     }
+
+
 }

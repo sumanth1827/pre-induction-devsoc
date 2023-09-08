@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4393012061433102063}
   - component: {fileID: -2525900569238232314}
   - component: {fileID: -1149998271042177623}
+  - component: {fileID: -7938918006091677171}
   m_Layer: 0
   m_Name: QMark
   m_TagString: Attack
@@ -123,3 +124,15 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.16}
   m_Size: {x: 1.53, y: 2.55}
   m_Direction: 0
+--- !u!114 &-7938918006091677171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4393012061433102060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b533b92073e69249bea69396547041f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
