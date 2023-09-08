@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ChalkGeneration : MonoBehaviour
 {
+    public Transform origin;
     public GameObject chalk;
     public EnemyAI enemyAI;
     public float minX;
@@ -23,19 +24,20 @@ public class ChalkGeneration : MonoBehaviour
     void FixedUpdate()
     {
         if (enemyAI != null) {
-            // if(!enemyAI.aggro){
+            if(!enemyAI.aggro){
                 if(Time.time > spawntime){
                     spawn();
                     spawntime = Time.time + timeBetweenSpawn;
                 }
-            // }
+            }
         }
     }
 
     private void spawn(){
         var c = Instantiate(chalk, transform.position, transform.rotation);
         Chalk cb = c.GetComponent<Chalk>();
-        cb.targetPos = new Vector3(playerTr.position.x, playerTr.position.y, 0);
+        cb.targetPos = new Vector3(playerTr.position.x - (origin.position.x - playerTr.position.x), -5, 0);
+        cb.arcHeight = playerTr.position.y + 4;
     }
 
 

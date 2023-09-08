@@ -17,7 +17,7 @@ public class paperBall : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        if(col.collider.tag == "Enenmy"){
+        if(col.collider.tag == "Enemy"){
             Destroy(gameObject);
         }
     }

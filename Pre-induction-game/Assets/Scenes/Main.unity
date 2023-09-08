@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef6ec79091b1b64b941cd1c9886a5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  origin: {fileID: 442091270}
   chalk: {fileID: 4889605335304666406, guid: 1dc26e6237d9f8646a74e8c3133c493b, type: 3}
   enemyAI: {fileID: 1639631923}
   minX: -8
@@ -320,7 +321,7 @@ MonoBehaviour:
   speed: 5
   maxY: 4.5
   minY: -4.5
-  maxT: 10
+  maxT: 8
   minT: 4
   timeBetweenSpawn: 2
 --- !u!1 &895357761
@@ -702,7 +703,7 @@ MonoBehaviour:
   speed: 3
   maxX: 8
   minX: -8
-  maxT: 7
+  maxT: 6
   minT: 4
   timeBetweenSpawn: 2
 --- !u!114 &1629068797
@@ -886,7 +887,7 @@ GameObject:
   - component: {fileID: 2041686343}
   m_Layer: 0
   m_Name: Professor
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
