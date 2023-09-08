@@ -38,7 +38,7 @@ public class playermovement : MonoBehaviour
     Vector2 mouseposition;
     Vector2 maindirection;
     [SerializeField] MicroBar launchbar;
-
+    Transform shootpoint;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -46,6 +46,7 @@ public class playermovement : MonoBehaviour
         anim = GetComponent<Animator>(); 
         sprite = GetComponent<SpriteRenderer>();
         groundcheck = GetComponentsInChildren<Transform>()[1];
+        shootpoint = GetComponentsInChildren<Transform>()[2];
         dashtrail = GetComponent<TrailRenderer>();
         launchbar.Initialize(20f);
 
@@ -115,7 +116,7 @@ public class playermovement : MonoBehaviour
             float force;
             force = shoot(powertime);
             Debug.Log(shoot(powertime));
-            GameObject newball = Instantiate(paperball, transform.position, transform.rotation);           
+            GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);           
             newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized*force;
             isloading = false;
             launchbar.UpdateHealthBar(0f, true);
