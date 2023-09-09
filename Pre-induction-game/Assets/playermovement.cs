@@ -39,6 +39,8 @@ public class playermovement : MonoBehaviour
     Vector2 maindirection;
     [SerializeField] MicroBar launchbar;
     Transform shootpoint;
+
+    
     // Start is called before the first frame update
     private void Awake()
     {
@@ -60,6 +62,7 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (isdashing)
         {
             return;
