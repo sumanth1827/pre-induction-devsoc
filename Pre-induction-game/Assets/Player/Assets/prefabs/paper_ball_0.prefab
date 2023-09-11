@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3009366243333152256}
   - component: {fileID: 6898901861830510318}
   - component: {fileID: 5518208948378801857}
-  - component: {fileID: -8910868615637281645}
+  - component: {fileID: 3603708947903755190}
   m_Layer: 6
   m_Name: paper_ball_0
   m_TagString: PlayerAttack
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-8910868615637281645
+--- !u!114 &3603708947903755190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

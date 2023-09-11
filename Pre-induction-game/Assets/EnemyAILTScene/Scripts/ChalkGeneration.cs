@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ChalkGeneration : MonoBehaviour
 {
-    public Transform origin;
+    private Transform origin;
     public GameObject chalk;
-    public EnemyAI enemyAI;
-    public Animator enemyAnim;
-    public float minX;
-    public float maxX;
-    public float timeBetweenSpawn = 2f;
+    private EnemyAI enemyAI;
+    private Animator enemyAnim;
+    private float timeBetweenSpawn = 2f;
     private float spawntime;
     private GameObject player;
     private Transform playerTr;
@@ -19,6 +17,9 @@ public class ChalkGeneration : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerTr = player.GetComponent<Transform>();
+        enemyAI = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAI>();
+        enemyAnim = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Animator>();
+        origin = GetComponent<Transform>();
     }
 
     // Update is called once per frame

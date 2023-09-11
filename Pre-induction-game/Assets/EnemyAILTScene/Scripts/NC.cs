@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class NC : MonoBehaviour
 {
-    public EnemyAI prof;
+    private EnemyAI prof;
     public GameObject questions;
 
-    public float speed;
-    public float maxX;
-    public float minX;
-    public float maxT;
-    public float minT;
-    public float timeBetweenSpawn;
+    public float speed = 3f;
+    public float maxX = 8f;
+    public float minX = -8f;
+    public float maxT = 6f;
+    public float minT = 4f;
+    public float timeBetweenSpawn = 2f;
     private float spawntime;
+
+    void Start()
+    {
+        prof = GameObject.FindGameObjectWithTag("Enemy").GetComponent<EnemyAI>();
+    }
+
 
     // Start is called before the first frame update
     void Update()

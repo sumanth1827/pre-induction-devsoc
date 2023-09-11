@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class paperball : MonoBehaviour
+public class paperBall : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator anim;
@@ -29,7 +29,7 @@ public class paperball : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D col){
-        if(col.collider.tag == "PlayerAttack"){
+        if(col.collider.tag == "Enemy"){
             Destroy(gameObject);
         }
     } 

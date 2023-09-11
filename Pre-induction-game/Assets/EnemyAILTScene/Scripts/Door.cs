@@ -5,11 +5,12 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private Animator self;
-    public Animator prof;
+    private Animator prof;
     // Start is called before the first frame update
     void Start()
     {
         self = GetComponent<Animator>();
+        prof = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Animator>();
     }
 
     // Update is called once per frame

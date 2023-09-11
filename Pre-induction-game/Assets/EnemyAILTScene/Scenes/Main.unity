@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 442091271}
   m_Layer: 0
   m_Name: Chalk Point
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,12 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aef6ec79091b1b64b941cd1c9886a5dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  origin: {fileID: 442091270}
   chalk: {fileID: 4889605335304666406, guid: 1dc26e6237d9f8646a74e8c3133c493b, type: 3}
-  enemyAI: {fileID: 1639631923}
-  minX: -8
-  maxX: 1
-  timeBetweenSpawn: 2
 --- !u!1 &464977341
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,7 +843,6 @@ GameObject:
   - component: {fileID: 1639631922}
   - component: {fileID: 1639631921}
   - component: {fileID: 1639631920}
-  - component: {fileID: 1639631924}
   - component: {fileID: 1639631923}
   - component: {fileID: 1639631925}
   m_Layer: 0
@@ -961,24 +955,6 @@ MonoBehaviour:
   health: 100
   aggro: 0
   healthText: {fileID: 1195807149}
---- !u!114 &1639631924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639631919}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c165b22d6941a95469fc914e6a1c7cb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathPoints:
-  - {fileID: 464977342}
-  - {fileID: 895357762}
-  moveSpeed: 2
-  targetPoint: {fileID: 0}
-  enemyAI: {fileID: 1639631923}
 --- !u!70 &1639631925
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1006,7 +982,7 @@ GameObject:
   - component: {fileID: 2041686343}
   m_Layer: 0
   m_Name: Professor
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
