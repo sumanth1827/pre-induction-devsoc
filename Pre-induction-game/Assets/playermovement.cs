@@ -40,7 +40,7 @@ public class playermovement : MonoBehaviour
     [SerializeField] MicroBar launchbar;
     Transform shootpoint;
 
-    
+    bool cam_move = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -124,7 +124,10 @@ public class playermovement : MonoBehaviour
             isloading = false;
             launchbar.UpdateHealthBar(0f, true);
         }
-    
+    if(cam_move)
+        {
+            Camera.main.transform.position = new Vector3(transform.position.x, 0f, Camera.main.transform.position.z);
+        }
 
     }
     private void FixedUpdate()
@@ -176,5 +179,12 @@ public class playermovement : MonoBehaviour
         
         return force;
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "cam_move")
+        {
+            cam_move = true;
+        }
     }
 }
