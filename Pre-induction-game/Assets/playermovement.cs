@@ -184,7 +184,15 @@ public class playermovement : MonoBehaviour
     {
         if(collision.tag == "cam_move")
         {
-            cam_move = true;
+            if(cam_move)
+            {
+                cam_move = false;
+            }
+            else 
+            {
+                cam_move = true;
+            }
+            
         }
     }
 }
