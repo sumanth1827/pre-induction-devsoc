@@ -44,9 +44,11 @@ public class CatController : MonoBehaviour
 
             // Calculate the target position (where the cat should move).
             Vector3 targetPosition = transform.position + directionToPlayer * movementSpeed * Time.deltaTime;
+            Debug.Log(targetPosition);
 
             // Move the cat smoothly towards the player.
-            transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed * Time.deltaTime);
+           // transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed * Time.deltaTime);
+            
         }
     }
 
@@ -75,4 +77,5 @@ public class CatController : MonoBehaviour
             Debug.Log("You win!");
         }
     }
+
 }

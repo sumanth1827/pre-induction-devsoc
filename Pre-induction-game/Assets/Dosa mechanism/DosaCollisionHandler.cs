@@ -30,5 +30,13 @@ public class DosaCollisionHandler : MonoBehaviour
             // Destroy the dosa.
             Destroy(gameObject);
         }
+        else if(collision.gameObject.CompareTag("ground"))
+        {
+Destroy(gameObject);
+        }
+          else if(collision.gameObject.CompareTag("Cat"))
+        {
+Destroy(gameObject);
+        }
     }
 }

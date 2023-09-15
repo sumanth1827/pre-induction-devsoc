@@ -10,14 +10,13 @@ public class DosaThrower : MonoBehaviour
     public Vector2 throwRegionMin;  // Minimum coordinates of the throw region.
     public Vector2 throwRegionMax;  // Maximum coordinates of the throw region.
     private int dosaCounter = 0;
-
-    private void Update()
+    private float Dosatime=2.0f;
+    void Start()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ThrowDosa();
-        }
+        InvokeRepeating("ThrowDosa",0.0f,Dosatime);
     }
+
+    
 
     void ThrowDosa()
     {
