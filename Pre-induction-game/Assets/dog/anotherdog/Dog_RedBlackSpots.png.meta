@@ -1,0 +1,2511 @@
+fileFormatVersion: 2
+guid: 0ccaad9aec3004b49b15bd57398c3c55
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d3f0cd4324ac04d802a1dce117375d
+      internalID: 649452036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27a943f65c366a49bb8926946c29fa4
+      internalID: 33768541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f22f0bf53ce3b347980a3d280a5520a
+      internalID: 1975243795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea37a5a60b98e764c9adcfd1b51a55a2
+      internalID: 1851116625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_4
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 543
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd9c47ec78d28340881512c7d8f8a2f
+      internalID: 1761779156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_5
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e243b83cd09b1b847b499262d3cbc6f7
+      internalID: 1596979125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_6
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd574c9ae68d04446bee8a37ede6378f
+      internalID: 1760967377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_7
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be17bd2cd30f5440a82dff9e26ebb86
+      internalID: 365707405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_8
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3da34c2c246d842a270e9e791c1d17
+      internalID: 683433348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_9
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b9864aa5299a4f4da3d0d5b6cae9727
+      internalID: -1864835572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_10
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c6906093db64144aee8ec3f0c10cae
+      internalID: -2058833991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_11
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 540
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a8eb84ae5b7c0e439ebbb8546905675
+      internalID: 140178957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_12
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 528
+        width: 52
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e896b2c9283dee4dbe987328e08e6ac
+      internalID: 1898296249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_13
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02ddba8a13bfc0468f8d8b501ffc215
+      internalID: -1139661514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_14
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 528
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6705f1abafa25ea4f96ebb1849f3f168
+      internalID: 625910459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_15
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 534
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7397fac304bb89a49918293d11039f34
+      internalID: 307039119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 480
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f0a52994f70b840ad27f5cf322b88b
+      internalID: 1096421386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 480
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8ffe93b8faecc48836824df144f9f9
+      internalID: 619406200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_18
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 480
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975f93789f28120458d0715b9adc5db9
+      internalID: 49043772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_19
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 480
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58481c9e6acf0514f8f1020711312dbe
+      internalID: 40131893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_20
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 480
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b7a53b25d21a843b7db2cf973c212a
+      internalID: -326009982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_21
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 480
+        width: 52
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aac4d1668a20366438c3754385e65152
+      internalID: -845565995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_22
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 481
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 310a83137f355684b81b3976dc296cc2
+      internalID: -1867249470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_23
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 480
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19542108f63632e4fac2ccb903544625
+      internalID: -358949679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 432
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aea596e97292c043b6c8268c5aa1b57
+      internalID: -287564054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_25
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 432
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9113f2241fdd641a25e7ef2b827ac9
+      internalID: 666421103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_26
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 432
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f821ca3229308448ee4216e04101a5
+      internalID: -168900660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_27
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 432
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50c6cfde9937b944a51c0a1ad5607e0
+      internalID: 369800182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_28
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 432
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316d6f77139085142bae877ab7ec8d9c
+      internalID: -1005336713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_29
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 432
+        width: 53
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ea44a991aa12842ade0a0c21c1390b
+      internalID: -449394117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_30
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 432
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3efe924bb72c4458521a6e9b57c046
+      internalID: 1618796347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_31
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 384
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e014e8b9cc1cf7944b2d3060d92b36a5
+      internalID: 1728585555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_32
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 384
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beeb6144796965043be7f285aec7807d
+      internalID: -369592251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_33
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 384
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd64813db6ce764482f3dd6c9b62aea
+      internalID: 1951762329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_34
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 384
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11edbc9ae7903c64b8bd8996d711b256
+      internalID: 1099816225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_35
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 384
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fab779a4ce93a7409c6d4a664a78050
+      internalID: -954952585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_36
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 384
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1b261e73aac4f4d9ab436cb6abcaa3
+      internalID: -1592554993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_37
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 336
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe925b9ff2eb0845bfbf30a172acdc2
+      internalID: 883593198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_38
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 336
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1e51ee33b84e754ab6af1b92a341ad4
+      internalID: -1421993609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_39
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 336
+        width: 51
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8cddc4bc18bc4458441bf9865ff01e
+      internalID: 2125934117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_40
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 336
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c23fbb5063c984b95d7595712c71f6
+      internalID: 772752486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_41
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 336
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c6bdf8cdb73ec49b0323d9ad9dc8d8
+      internalID: 1681408545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 288
+        width: 47
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ffdf20d261015c4aad52fc1c5b4bb5b
+      internalID: -1335671707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_43
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 288
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a18c6fdc4a661f47b1a3f9c5859fd59
+      internalID: 1762491747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_44
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 288
+        width: 46
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd16799debbe8654f9c59053867c2c23
+      internalID: -67634698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_45
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 288
+        width: 47
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990c2e0040a719d4397134089973fe64
+      internalID: 1040694879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_46
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 288
+        width: 47
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a813d3f404e48f64095fcd5963782663
+      internalID: 1439751284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_47
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 288
+        width: 29
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dd70b40d7bb9f46b81cf794104cb10
+      internalID: -1075162916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_48
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 288
+        width: 30
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a405031ade0914b98ff44c830c2bbb
+      internalID: -1676330949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_49
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0f324f73b9e3d6418414ef096fe7001
+      internalID: -440210391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_50
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b45b0c584a4e324bbe948751d4851e2
+      internalID: -908067429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_51
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 240
+        width: 51
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cce10f42cc1ecf4aa0a40085c0678e8
+      internalID: 410527169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_52
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 240
+        width: 48
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e600b1d8f3b1fb54193216b846e05074
+      internalID: 1969742544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_53
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 255
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f52ec0277a5ed74aba3aea83f10b8f3
+      internalID: 384219248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_54
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 240
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d577f3a0dc9d44b9af33a4c39e58be
+      internalID: -1179580523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_55
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 240
+        width: 51
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9ec3f001ce86a439d538046235c276
+      internalID: -631498897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_56
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fccfa3a49c39fde41afb5ea4d3034bda
+      internalID: 182833210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_57
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280d972c555bff040bf5e2310fee7785
+      internalID: 2034950503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_58
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca6efdf69de7d947a129fb689f137b8
+      internalID: 437320412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_59
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 240
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc65d4f0d074a849afb1fafa7ca40df
+      internalID: -70637683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_60
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 252
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f11fbffe8dc8db84cb84474ef1705359
+      internalID: -2143399352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_61
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 240
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5189d880d34718240b8e1de427a03873
+      internalID: -533503250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_62
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 240
+        width: 44
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795fadb7c92714e4aadd820f43b065d7
+      internalID: -1048832935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_63
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 240
+        width: 52
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836801065d848714191aabff212a479a
+      internalID: 416987210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_64
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 246
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd63696fed7873541a596415577f47f9
+      internalID: 1077749001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_65
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 192
+        width: 49
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ea336e60874674891f9efba95c68e3
+      internalID: 1067894710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_66
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 192
+        width: 53
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5212395f8788aed45bd764f995d2ddd7
+      internalID: 2033014761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_67
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 192
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26157630c749d9c47ad58ff642d9a2e3
+      internalID: -1156435471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_68
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 192
+        width: 50
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd99daa6b71045f429b7dd42f6681452
+      internalID: -1430505785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_69
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 192
+        width: 53
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 811889c3dc4bea34d9444747674ef464
+      internalID: -779865078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_70
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 192
+        width: 52
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a0d33bb2cac6444a55a708b4da22e9
+      internalID: -1231156728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_71
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 193
+        width: 52
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28050540b51940f4995f29355a9c4130
+      internalID: -915734687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_72
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 192
+        width: 52
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180d5c5ede9d19249a46c7f22d3568f6
+      internalID: -1253605273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_73
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 144
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f743ddbfadfb84e8a594e22aeea262
+      internalID: -1440766172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_74
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 144
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f2ed4cb050e004c97cc02d5d5a8493
+      internalID: 254280360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_75
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 144
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c70f89e51c7054fbd3d31b1e198935
+      internalID: 371176502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_76
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 144
+        width: 56
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d1effcb960c4d4b99297537f82bb68
+      internalID: 470212749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_77
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 144
+        width: 54
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf28f890eaaf6cc40a0c15f6e1374f39
+      internalID: 371594124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_78
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 144
+        width: 53
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc5f3d97fa681d41bbc28a374bfa400
+      internalID: -1500379134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_79
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 144
+        width: 55
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d72403a8ba7fbf543a91f7687c4a622b
+      internalID: 1699542802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_80
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 96
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac85b26258d9ef45ba29616c36c76a3
+      internalID: 28460249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_81
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 96
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4523d7c0083b9a3449b48b95c5943a0f
+      internalID: -640130884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_82
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 96
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d4f5602f5daf54d8d583102d18c9a9
+      internalID: 548419326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_83
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 96
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9a7329eae67c645b954e3bbadcbc65
+      internalID: -2093315539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_84
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 96
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a780a02abe41cad498e1ec3af36cf61e
+      internalID: -1602416733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_85
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 96
+        width: 42
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d4656d4c886a884fb92e25831ed4528
+      internalID: 12641001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_86
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 48
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9180a3fbf4d9fae4e88b42af6a923d3f
+      internalID: -1294146630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_87
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 48
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63841bc459d21104ea77f675ca89eb8a
+      internalID: 158757921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_88
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 48
+        width: 51
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801dc5a4ea13a6342895d753d0123053
+      internalID: 1653359121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_89
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 48
+        width: 48
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa25eded80fd1ab41b9d5b597fe8847e
+      internalID: 1169104177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_90
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 48
+        width: 47
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: affe72d7530e37d4abd0108bb4e69611
+      internalID: -1062967130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_91
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bad8f4496f4f045ab0bd81620633bc
+      internalID: -323575182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_92
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf9eebc2028d924b84a164bddd7d180
+      internalID: -252681019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_93
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 51
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010a783c926cb3f46bb9b9a01accdbcc
+      internalID: -543394218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_94
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29eb7eff519dccd419f30cabd59ade5d
+      internalID: -654576473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_95
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 15
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60c492ddb0a7fa44bfcc48173322ac7
+      internalID: 2107824945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_96
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 0
+        width: 47
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9e7a3622dfc79479e6f09ec774dd77
+      internalID: -1718394386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_97
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 51
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788116169c2fc5a47a8f89c79d6be0b1
+      internalID: 832599088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_98
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 19
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2588ac04be3784ea2d758231e098ec
+      internalID: 1168816118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_99
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8423b26ea2c4a7f4d84bf0135d2ab641
+      internalID: -412337282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_100
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7e7f37c807b7ad4ba78d270446fe690
+      internalID: 1027172218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_101
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6eaa922245a944fa132833a70bf65e
+      internalID: 1493338721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_102
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7019c3acfa351d8459e6639538d9c293
+      internalID: -20903490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_103
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 0
+        width: 50
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81708302ba000644acb9c122e01e504
+      internalID: -1671618264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_104
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 0
+        width: 44
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f91ebc6db239740848fab4fad4a7f0
+      internalID: 1390133672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_105
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 0
+        width: 52
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 808d8ae885075a048833293bbbed8ae5
+      internalID: -1954371805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_106
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 12
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d0d530a974e724b9cc5b388cbaf58a
+      internalID: 1060897184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dog_RedBlackSpots_107
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 6
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6eb575038a6874d965c0185dd8fc78
+      internalID: 2103496729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Dog_RedBlackSpots_0: 649452036
+      Dog_RedBlackSpots_1: 33768541
+      Dog_RedBlackSpots_10: -2058833991
+      Dog_RedBlackSpots_100: 1027172218
+      Dog_RedBlackSpots_101: 1493338721
+      Dog_RedBlackSpots_102: -20903490
+      Dog_RedBlackSpots_103: -1671618264
+      Dog_RedBlackSpots_104: 1390133672
+      Dog_RedBlackSpots_105: -1954371805
+      Dog_RedBlackSpots_106: 1060897184
+      Dog_RedBlackSpots_107: 2103496729
+      Dog_RedBlackSpots_11: 140178957
+      Dog_RedBlackSpots_12: 1898296249
+      Dog_RedBlackSpots_13: -1139661514
+      Dog_RedBlackSpots_14: 625910459
+      Dog_RedBlackSpots_15: 307039119
+      Dog_RedBlackSpots_16: 1096421386
+      Dog_RedBlackSpots_17: 619406200
+      Dog_RedBlackSpots_18: 49043772
+      Dog_RedBlackSpots_19: 40131893
+      Dog_RedBlackSpots_2: 1975243795
+      Dog_RedBlackSpots_20: -326009982
+      Dog_RedBlackSpots_21: -845565995
+      Dog_RedBlackSpots_22: -1867249470
+      Dog_RedBlackSpots_23: -358949679
+      Dog_RedBlackSpots_24: -287564054
+      Dog_RedBlackSpots_25: 666421103
+      Dog_RedBlackSpots_26: -168900660
+      Dog_RedBlackSpots_27: 369800182
+      Dog_RedBlackSpots_28: -1005336713
+      Dog_RedBlackSpots_29: -449394117
+      Dog_RedBlackSpots_3: 1851116625
+      Dog_RedBlackSpots_30: 1618796347
+      Dog_RedBlackSpots_31: 1728585555
+      Dog_RedBlackSpots_32: -369592251
+      Dog_RedBlackSpots_33: 1951762329
+      Dog_RedBlackSpots_34: 1099816225
+      Dog_RedBlackSpots_35: -954952585
+      Dog_RedBlackSpots_36: -1592554993
+      Dog_RedBlackSpots_37: 883593198
+      Dog_RedBlackSpots_38: -1421993609
+      Dog_RedBlackSpots_39: 2125934117
+      Dog_RedBlackSpots_4: 1761779156
+      Dog_RedBlackSpots_40: 772752486
+      Dog_RedBlackSpots_41: 1681408545
+      Dog_RedBlackSpots_42: -1335671707
+      Dog_RedBlackSpots_43: 1762491747
+      Dog_RedBlackSpots_44: -67634698
+      Dog_RedBlackSpots_45: 1040694879
+      Dog_RedBlackSpots_46: 1439751284
+      Dog_RedBlackSpots_47: -1075162916
+      Dog_RedBlackSpots_48: -1676330949
+      Dog_RedBlackSpots_49: -440210391
+      Dog_RedBlackSpots_5: 1596979125
+      Dog_RedBlackSpots_50: -908067429
+      Dog_RedBlackSpots_51: 410527169
+      Dog_RedBlackSpots_52: 1969742544
+      Dog_RedBlackSpots_53: 384219248
+      Dog_RedBlackSpots_54: -1179580523
+      Dog_RedBlackSpots_55: -631498897
+      Dog_RedBlackSpots_56: 182833210
+      Dog_RedBlackSpots_57: 2034950503
+      Dog_RedBlackSpots_58: 437320412
+      Dog_RedBlackSpots_59: -70637683
+      Dog_RedBlackSpots_6: 1760967377
+      Dog_RedBlackSpots_60: -2143399352
+      Dog_RedBlackSpots_61: -533503250
+      Dog_RedBlackSpots_62: -1048832935
+      Dog_RedBlackSpots_63: 416987210
+      Dog_RedBlackSpots_64: 1077749001
+      Dog_RedBlackSpots_65: 1067894710
+      Dog_RedBlackSpots_66: 2033014761
+      Dog_RedBlackSpots_67: -1156435471
+      Dog_RedBlackSpots_68: -1430505785
+      Dog_RedBlackSpots_69: -779865078
+      Dog_RedBlackSpots_7: 365707405
+      Dog_RedBlackSpots_70: -1231156728
+      Dog_RedBlackSpots_71: -915734687
+      Dog_RedBlackSpots_72: -1253605273
+      Dog_RedBlackSpots_73: -1440766172
+      Dog_RedBlackSpots_74: 254280360
+      Dog_RedBlackSpots_75: 371176502
+      Dog_RedBlackSpots_76: 470212749
+      Dog_RedBlackSpots_77: 371594124
+      Dog_RedBlackSpots_78: -1500379134
+      Dog_RedBlackSpots_79: 1699542802
+      Dog_RedBlackSpots_8: 683433348
+      Dog_RedBlackSpots_80: 28460249
+      Dog_RedBlackSpots_81: -640130884
+      Dog_RedBlackSpots_82: 548419326
+      Dog_RedBlackSpots_83: -2093315539
+      Dog_RedBlackSpots_84: -1602416733
+      Dog_RedBlackSpots_85: 12641001
+      Dog_RedBlackSpots_86: -1294146630
+      Dog_RedBlackSpots_87: 158757921
+      Dog_RedBlackSpots_88: 1653359121
+      Dog_RedBlackSpots_89: 1169104177
+      Dog_RedBlackSpots_9: -1864835572
+      Dog_RedBlackSpots_90: -1062967130
+      Dog_RedBlackSpots_91: -323575182
+      Dog_RedBlackSpots_92: -252681019
+      Dog_RedBlackSpots_93: -543394218
+      Dog_RedBlackSpots_94: -654576473
+      Dog_RedBlackSpots_95: 2107824945
+      Dog_RedBlackSpots_96: -1718394386
+      Dog_RedBlackSpots_97: 832599088
+      Dog_RedBlackSpots_98: 1168816118
+      Dog_RedBlackSpots_99: -412337282
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
