@@ -23,6 +23,7 @@ public class playermovement : MonoBehaviour
     [SerializeField] LayerMask ground;
     [SerializeField] LayerMask couples;
     Transform groundcheck;
+     Transform groundcheck2;
 
 
     bool candash = true, isdashing;
@@ -45,6 +46,7 @@ public class playermovement : MonoBehaviour
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         groundcheck = GetComponentsInChildren<Transform>()[1];
+        groundcheck2 = GetComponentsInChildren<Transform>()[2];
         dashtrail = GetComponent<TrailRenderer>();
 
     }
@@ -64,7 +66,7 @@ public class playermovement : MonoBehaviour
         {
             return;
         }
-        isHit = Physics2D.OverlapCircle(groundcheck.position, 0.2f, couples);
+        isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
         if (isHit != null)
         {
             rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
@@ -87,7 +89,7 @@ public class playermovement : MonoBehaviour
         {
 
             rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
-
+           
             //rb.velocity = new Vector2(rb.velocity.x, 15f);
             //grounded = false;
         }

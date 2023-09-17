@@ -146,7 +146,7 @@ public class dogAI : MonoBehaviour
             // Apply an upward force only when within attack distance
             if (distance <= attackDistance)
             {
-                Vector2 leapForce = new Vector2(leapDirection.x, 1f).normalized * thrust;
+                Vector2 leapForce = new Vector2(leapDirection.x, 1f).normalized * thrust*Time.deltaTime;
                 rb.AddForce(leapForce, ForceMode2D.Impulse);
             }
 
