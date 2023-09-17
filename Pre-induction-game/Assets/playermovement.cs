@@ -107,7 +107,7 @@ public class playermovement : MonoBehaviour
         
         if(Input.GetMouseButtonUp(0))
         {
-            Debug.Log(Time.time - time);
+            // Debug.Log(Time.time - time);
             if ((Time.time - time) > maxpowertime)
             {
                 powertime = maxpowertime;
@@ -118,7 +118,7 @@ public class playermovement : MonoBehaviour
             }
             float force;
             force = shoot(powertime);
-            Debug.Log(shoot(powertime));
+            // Debug.Log(shoot(powertime));
             GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);           
             newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized*force;
             isloading = false;

@@ -7,7 +7,8 @@ using static UnityEngine.UI.Image;
 
 public class enemyai : MonoBehaviour
 {
-    public Slider healthBar;
+    // public Slider healthBar;
+    public GameObject healthBar;
     public float health;
     GameObject player;
     Animator anim;
@@ -90,8 +91,13 @@ public class enemyai : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
-        healthBar.value = ((health)/200f)*0.39f + 0.61f;
-
+        // healthBar.value = ((health)/200f)*0.39f + 0.61f;
+        if(health >= 0){
+            healthBar.transform.localScale = new Vector3((health)/200f, 1, 1);
+        }
+        else{
+            healthBar.transform.localScale = new Vector3(0, 1, 1);
+        }
     }
     public void throw_chalk()
         {
@@ -118,7 +124,7 @@ public class enemyai : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col){
         if(col.collider.tag == "playerAttacks"){
-            health -= 30f;
+            health -= 20f;
         }
     }
 
