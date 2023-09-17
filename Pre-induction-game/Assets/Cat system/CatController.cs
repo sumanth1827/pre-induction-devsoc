@@ -16,9 +16,10 @@ public class CatController : MonoBehaviour
     public Text timerText;
    
 
-
+Animator anim;
     void Start()
     {
+        anim = GetComponent<Animator>();
         // Initialize the timer.
         timer = restingTime;
     }
@@ -39,6 +40,16 @@ public class CatController : MonoBehaviour
         }
         else
         {
+            if(Mathf.Abs(playerTransform.position.x-transform.position.x)<2f)
+            {
+                anim.SetBool("is_walking",false);
+                anim.SetBool("is_attacking",true);
+            }
+
+            else{
+            anim.SetBool("is_attacking",false);
+            anim.SetBool("is_walking",true);
+
             // Calculate the direction from the cat to the player.
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
 
@@ -47,7 +58,14 @@ public class CatController : MonoBehaviour
 
             // Move the cat smoothly towards the player.
             transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed);
-        }
+            }
+
+            if(playerTransform.position.x>transform.position.x)
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            else
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+         }
     }
 
     // Method to switch to the attacking state.
