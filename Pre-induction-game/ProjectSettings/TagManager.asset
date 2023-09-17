@@ -4,8 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - cam_move
   - Enemy
-  - PlayerAttack
+  - Attack
+  - platform
+  - playerAttacks
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - UI
   - ball
   - Player
-  - 
+  - platform
   - 
   - 
   - 

@@ -22,5 +22,11 @@ public class Attacks : MonoBehaviour
         if(col.tag == "Player"){
             Destroy(gameObject);
         }
+        if (col.tag == "platform")
+        {
+            
+            col.gameObject.GetComponent<Animator>().SetTrigger("break");
+            Destroy(gameObject);
+        }
     }
 }

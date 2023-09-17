@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public int health = 100;
     public bool aggro;
     private Animator anim;
-    public Text healthText;
+    //public Text healthText;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate(){
         aggro = anim.GetBool("isAggro");
-        healthText.text = health.ToString();
+        //healthText.text = health.ToString();
         if(health <= 0){
             anim.SetBool("isDefeated",true);
             Destroy(gameObject, 4f);
