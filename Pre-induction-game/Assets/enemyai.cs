@@ -70,13 +70,13 @@ public class enemyai : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (distance.x > 10f || distance.x < -10f)
+        if (distance.x > 10f || distance.x < -10f && !isagro)
         {
             //anim.SetBool("attack", false);
             rb.velocity = new Vector2(distance.normalized.x * speed, 0f);
 
         }
-        else
+        else if(distance.x < 10f || distance.x > -10f && !isagro)
         {
             rb.velocity = Vector2.zero;
 
@@ -103,6 +103,7 @@ public class enemyai : MonoBehaviour
         yield return new WaitForSeconds(time);
         isagro = true;
         anim.SetTrigger("agro");
+        NC_spawner.instance.spawner();
         yield return new WaitForSeconds(2.5f);
         isagro = false;
         time = Random.Range(5, 10);

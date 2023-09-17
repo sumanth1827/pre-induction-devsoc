@@ -22,10 +22,10 @@ public class NC_spawner : MonoBehaviour
    public void spawner()
     {
         var v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y, self.position.y + 6f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(50f, 0f);
+        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
         v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y+7f, self.position.y + 12f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(50f, 0f);
+        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
         v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y + 13f, self.position.y + 18f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(50f, 0f);
+        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
     }
 }
