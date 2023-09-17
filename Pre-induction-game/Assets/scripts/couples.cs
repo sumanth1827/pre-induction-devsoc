@@ -18,7 +18,7 @@ public class couples : MonoBehaviour
 
     void Update()
     {
-        Invoke("EnemySpeed", 1f);
+        EnemySpeed();
 
         if (hit)
         {
@@ -32,8 +32,7 @@ public class couples : MonoBehaviour
 
     private void EnemySpeed()
     {
-        Vector2 directionToEnd = (end.transform.position - transform.position).normalized;
-        Vector2 velocity = directionToEnd * speed;
+        Vector2 velocity = Vector2.left * speed;
 
         rb.velocity = velocity;
     }

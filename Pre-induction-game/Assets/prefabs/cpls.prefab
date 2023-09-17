@@ -150,8 +150,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hit: 0
-  shrinkFactor: 0.95
-  speed: 8
+  shrinkFactor: 0.8
+  speed: 15
   rb: {fileID: 4923589289138018813}
   end: {fileID: 6906844310735113242, guid: ba9cb58844d76e240a363966ae1c70be, type: 3}
 --- !u!114 &7919782729380732696
@@ -173,7 +173,7 @@ PlatformEffector2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4923589289138018814}
-  m_Enabled: 1
+  m_Enabled: 0
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
@@ -196,7 +196,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.020466894, y: 1.0347238}
   m_SpriteTilingProperty:

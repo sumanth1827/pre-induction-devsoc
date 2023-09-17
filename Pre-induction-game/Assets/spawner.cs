@@ -8,12 +8,11 @@ using static UnityEditor.FilePathAttribute;
 public class spawner : MonoBehaviour
 {
     [SerializeField] private GameObject couple;
-    [SerializeField] float delayInSeconds = 5f;
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(spawnEnemy(Random.Range(4f,8f)));
+        StartCoroutine(spawnEnemy(Random.Range(1f,3f)));
     }
 
     // Update is called once per frame
@@ -25,7 +24,7 @@ public class spawner : MonoBehaviour
     {
         GameObject couples_pre = Instantiate(couple, transform.position, Quaternion.identity);
         yield return new WaitForSeconds(delayInSeconds);
-        StartCoroutine(spawnEnemy(Random.Range(4f, 8f)));
+        StartCoroutine(spawnEnemy(Random.Range(1f, 3f)));
     }
    
 }
