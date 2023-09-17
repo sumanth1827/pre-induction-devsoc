@@ -90,7 +90,7 @@ public class enemyai : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
-        healthBar.value = ((health)/200f)*0.36f + 0.64f;
+        healthBar.value = ((health)/200f)*0.39f + 0.61f;
 
     }
     public void throw_chalk()
