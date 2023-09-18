@@ -8,14 +8,16 @@ public class DialogueManager : MonoBehaviour
     public Text nameText;
     public Text dialogueText;
     public Queue<string> sentences;
+    public static DialogueManager instance;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         sentences = new Queue<string>();
-
-
+        instance = this;
     }
+
     public void StartDialogue(Dialogue dialogue)
     {
         nameText.text = dialogue.name;
@@ -23,28 +25,39 @@ public class DialogueManager : MonoBehaviour
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
-
         }
-        DisplayNextSentence();
 
+        DisplayNextSentence();
     }
+
     public void DisplayNextSentence()
     {
         if (sentences.Count == 0)
         {
-            EndDialgue();
-            return;
+            EndDialogue();
+            
         }
+
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
-
     }
-    void EndDialgue()
+
+    public void EndDialogue()
     {
         Debug.Log("End of conversation.");
-
+        freezer.instance.UnfreezeScene();
+       
     }
 
     // Update is called once per frame
-
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (sentences.Count > 0)
+            {
+                DisplayNextSentence();
+            }
+        }
+    }
 }
