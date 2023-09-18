@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airspeed: 20
-  groundspeed: 25
+  groundspeed: 18
   walkDeceleration: 20
   jumpforce: 28
   hit: 0
@@ -1227,7 +1227,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 7.68
+  orthographic size: 10.05
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1897,6 +1897,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1154256249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 180.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7627025112868335002, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: m_Name
+      value: doggo (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
 --- !u!1 &1236446826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,11 +1996,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 14.656387, y: 10.352966}
+    - - {x: 30.87001, y: -11.761948}
+      - {x: 29.520706, y: 10.541122}
       - {x: -0.2257843, y: 10.374627}
       - {x: -14.659949, y: 10.516689}
-      - {x: -15.188981, y: 10.19322}
-      - {x: -15.629957, y: -11.471101}
+      - {x: -26.007957, y: 10.19322}
+      - {x: -26.919317, y: -12.505959}
       - {x: 15.766776, y: -11.762283}
 --- !u!4 &1236446828
 Transform:
@@ -2128,7 +2186,7 @@ MonoBehaviour:
   m_Follow: {fileID: 156022703}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 7.68
+    OrthographicSize: 10.05
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -2216,7 +2274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1385717858
 Rigidbody2D:
   serializedVersion: 4
@@ -2988,6 +3046,10 @@ PrefabInstance:
       value: spawner
       objectReference: {fileID: 0}
     - target: {fileID: 682186241767074826, guid: db02335bae1f8e746b50f9c21f5dd9e1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 682186241767074826, guid: db02335bae1f8e746b50f9c21f5dd9e1, type: 3}
       propertyPath: m_TagString
       value: spawner
       objectReference: {fileID: 0}
@@ -3123,7 +3185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 124.67
+      value: 116.08
       objectReference: {fileID: 0}
     - target: {fileID: 7627025112868334999, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3161,30 +3223,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7627025112868335000, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 156022696}
     - target: {fileID: 7627025112868335002, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
       propertyPath: m_Name
       value: doggo
       objectReference: {fileID: 0}
+    - target: {fileID: 7627025113706073168, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
+      propertyPath: speed
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
---- !u!1 &7627025113706073167 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7627025112868335002, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
-  m_PrefabInstance: {fileID: 7627025113706073166}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7627025113706073168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7627025113706073167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57fb8806d4b01e74eba63e334a0c5060, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
