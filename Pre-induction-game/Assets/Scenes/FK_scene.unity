@@ -21708,6 +21708,7 @@ MonoBehaviour:
   throwSpeed: 20
   throwRegionMin: {x: -32, y: -2.5}
   throwRegionMax: {x: -1.2, y: -12}
+  throwtimer: 1
 --- !u!4 &1630218472
 Transform:
   m_ObjectHideFlags: 0

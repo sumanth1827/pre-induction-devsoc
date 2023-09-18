@@ -10,13 +10,13 @@ public class DosaThrower : MonoBehaviour
     public Vector2 throwRegionMin;  // Minimum coordinates of the throw region.
     public Vector2 throwRegionMax;  // Maximum coordinates of the throw region.
     private int dosaCounter = 0;
+    private Vector2 lastThrowDirection = Vector2.zero;
+    public float throwtimer = 2f;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ThrowDosa();
-        }
+        // Start throwing dosa every 2 seconds.
+        InvokeRepeating("ThrowDosa", 0f, throwtimer);
     }
 
     void ThrowDosa()
@@ -25,23 +25,28 @@ public class DosaThrower : MonoBehaviour
         Vector2 randomPosition = new Vector2(Random.Range(throwRegionMin.x, throwRegionMax.x),
                                              Random.Range(throwRegionMin.y, throwRegionMax.y));
 
+        // Calculate a new direction to throw Dosa.
+        Vector2 throwDirection;
+        do
+        {
+            throwDirection = (randomPosition - (Vector2)throwPoint.position).normalized;
+        } while (throwDirection == lastThrowDirection); // Keep generating until it's not the same as the last throw direction
+
+        lastThrowDirection = throwDirection; // Store the current throw direction as the last direction
+
         // Create a Dosa instance at the throw point.
         GameObject dosa = Instantiate(dosaPrefab, throwPoint.position, Quaternion.identity);
-
-        // Calculate the direction to throw Dosa.
-        Vector2 throwDirection = (randomPosition - (Vector2)throwPoint.position).normalized;
 
         // Apply force to the Dosa to move it slowly.
         dosa.GetComponent<Rigidbody2D>().velocity = throwDirection * throwSpeed;
 
         DosaCollisionHandler dosaCollisionHandler = dosa.AddComponent<DosaCollisionHandler>();
         dosaCollisionHandler.Initialize(this);
-    
-}
+    }
+
     public void PlayerTouchedDosa()
     {
         dosaCounter++;
         Debug.Log("Dosa Counter: " + dosaCounter);
-     
     }
 }
