@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class couples : MonoBehaviour
 {
     public bool hit = false;
@@ -32,7 +32,7 @@ public class couples : MonoBehaviour
 
     private void EnemySpeed()
     {
-        Vector2 velocity = Vector2.left * speed;
+        Vector2 velocity = Vector2.right * speed;
 
         rb.velocity = velocity;
     }

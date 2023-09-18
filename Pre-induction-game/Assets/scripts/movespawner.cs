@@ -23,6 +23,9 @@ public class movespawner : MonoBehaviour
         {
             transform.position = new Vector2(Camera.main.transform.position.x - 25f, transform.position.y);
 
+        }else if (gameObject.tag == "dogSpawner")
+        {
+            transform.position = new Vector2(Camera.main.transform.position.x + 30f, transform.position.y);
         }
     }
 }
