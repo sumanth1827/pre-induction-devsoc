@@ -3921,10 +3921,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 156022696}
-    - target: {fileID: 5993182391222912561, guid: a959461cfce65f64e84a57e4ef158740, type: 3}
-      propertyPath: totaldist
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 5993182391222912562, guid: a959461cfce65f64e84a57e4ef158740, type: 3}
       propertyPath: m_Name
       value: startpoint
@@ -4072,10 +4068,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8252926478718397340, guid: b25425def0e15c24d9ad2f6ccd542f4a, type: 3}
-      propertyPath: m_fontColor32.rgba
-      value: 67108863
-      objectReference: {fileID: 0}
     - target: {fileID: 8252926478889189059, guid: b25425def0e15c24d9ad2f6ccd542f4a, type: 3}
       propertyPath: m_Name
       value: Canvas
