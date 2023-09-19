@@ -805,7 +805,7 @@ MonoBehaviour:
     m_Bits: 8
   dashingpower: 44
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
-  launchbar: {fileID: 0}
+  launchbar: {fileID: 1857351501}
   hit: 0
   couples:
     serializedVersion: 2
@@ -3170,6 +3170,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parllaxfactor: 0.6
   rb: {fileID: 0}
+--- !u!114 &1857351501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2558675667213612300, guid: 4c6e67c472921b442a89b9253a82aced, type: 3}
+  m_PrefabInstance: {fileID: 937337946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d779446027b6f034f9d448761b76a0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905429119
 GameObject:
   m_ObjectHideFlags: 0

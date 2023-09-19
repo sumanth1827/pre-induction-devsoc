@@ -56,7 +56,8 @@ public class playermovement : MonoBehaviour
         anim = GetComponent<Animator>(); 
         sprite = GetComponent<SpriteRenderer>();
         groundcheck = GetComponentsInChildren<Transform>()[1];
-        shootpoint = GetComponentsInChildren<Transform>()[2];
+        shootpoint = GetComponentsInChildren<Transform>()[3];
+        groundcheck2 = GetComponentsInChildren<Transform>()[2];
         dashtrail = GetComponent<TrailRenderer>();
         launchbar.Initialize(20f);
 
