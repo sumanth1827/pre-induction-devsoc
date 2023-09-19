@@ -19,7 +19,7 @@ public class Chalk : MonoBehaviour
 	void Update()
 	{
 		if(playerPos.position.y < 5	){
-			speed = 20f;
+			speed = 50f;
 		}
 		else{
 			speed = 10f;
