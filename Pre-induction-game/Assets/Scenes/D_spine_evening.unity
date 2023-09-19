@@ -703,15 +703,16 @@ MonoBehaviour:
   groundspeed: 18
   walkDeceleration: 20
   jumpforce: 28
-  hit: 0
   ground:
     serializedVersion: 2
     m_Bits: 8
-  couples:
-    serializedVersion: 2
-    m_Bits: 256
   dashingpower: 44
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
+  launchbar: {fileID: 1814132519}
+  hit: 0
+  couples:
+    serializedVersion: 2
+    m_Bits: 1024
   bounce: 7
 --- !u!95 &156022700
 Animator:
@@ -733,7 +734,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &156022701
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2438,7 +2438,7 @@ GameObject:
   - component: {fileID: 1405219449340467489}
   - component: {fileID: 1405219449340467490}
   - component: {fileID: 1405219449340467491}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: cpls
   m_TagString: couples
   m_Icon: {fileID: 0}
@@ -2965,6 +2965,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 126de06da89364d4cbdfb1b2a649b156, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1814132519 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2558675667213612300, guid: 4c6e67c472921b442a89b9253a82aced, type: 3}
+  m_PrefabInstance: {fileID: 937337946}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d779446027b6f034f9d448761b76a0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1814199437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7627025112868335002, guid: 60ee473430595ce49b0f2945e5ecb99a, type: 3}
@@ -3365,7 +3376,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!251 &1405219449340467490
 PlatformEffector2D:
   m_ObjectHideFlags: 0
