@@ -121,17 +121,19 @@ public class enemyai : MonoBehaviour
     private IEnumerator behaviour(float timer)
     {
         yield return new WaitForSeconds(timer);
-        
+
         int time = Random.Range(2, 5);
         yield return new WaitForSeconds(time);
         isagro = true;
         anim.SetTrigger("agro");
+        NC_spawner.instance.spawner();
         yield return new WaitForSeconds(2.5f);
         isagro = false;
         time = Random.Range(5, 10);
         yield return new WaitForSeconds(time);
         StartCoroutine(behaviour(1f));
     }
+
 
     void OnCollisionEnter2D(Collision2D col){
         if(col.collider.tag == "playerAttacks"){
