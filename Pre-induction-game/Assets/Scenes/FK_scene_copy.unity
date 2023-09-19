@@ -2323,8 +2323,8 @@ Canvas:
   m_GameObject: {fileID: 263397168}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2371,7 +2371,7 @@ GameObject:
   - component: {fileID: 419033474}
   - component: {fileID: 419033475}
   - component: {fileID: 419033476}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cat
   m_TagString: Cat
   m_Icon: {fileID: 0}
@@ -2497,7 +2497,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &419033476
 Rigidbody2D:
   serializedVersion: 4
@@ -21007,7 +21006,7 @@ RectTransform:
   m_GameObject: {fileID: 944396110}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.096, y: 2.096, z: 2.096}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 263397172}
@@ -21015,7 +21014,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296, y: 177}
+  m_AnchoredPosition: {x: -694, y: 458}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &944396112
@@ -21117,6 +21116,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4946953381863315540, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946953381863315540, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946953381863315540, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6276
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946953381863315540, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -397
+      objectReference: {fileID: 0}
     - target: {fileID: 4946953381872067493, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -21213,6 +21228,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4946953382855405097, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 4946953382855405097, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946953382855405097, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4946953382855405100, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
       propertyPath: m_Name
       value: DialogueBox
@@ -21257,7 +21284,7 @@ RectTransform:
   m_GameObject: {fileID: 1100813290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.6894, y: 1.8794574, z: 1.6894}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 263397172}
@@ -21265,7 +21292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -172.24118, y: 153}
+  m_AnchoredPosition: {x: -524, y: 375}
   m_SizeDelta: {x: 405.5176, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1100813292
@@ -21597,7 +21624,7 @@ GameObject:
   - component: {fileID: 1343627944}
   - component: {fileID: 1343627945}
   - component: {fileID: 1343627946}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Dosa
   m_TagString: Dosa
   m_Icon: {fileID: 0}
@@ -21775,7 +21802,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1438149020
 MonoBehaviour:
   m_ObjectHideFlags: 0
