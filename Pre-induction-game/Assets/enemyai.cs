@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using static UnityEngine.UI.Image;
+using UnityEngine.SceneManagement;
 
 public class enemyai : MonoBehaviour
 {
@@ -22,7 +24,7 @@ public class enemyai : MonoBehaviour
     [SerializeField] GameObject chalk;
     [SerializeField] Transform bounds;
     bool facingright = false;
-
+    [SerializeField] Animator endscene;
 
 
 
@@ -30,7 +32,7 @@ public class enemyai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 200f;
+        health = 300f;
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -74,7 +76,17 @@ public class enemyai : MonoBehaviour
             flip();
 
         }
+        if(health <= 0)
+        {
+            playermovement.instance.alive = false;
+            endscene.SetBool("win", true);
+            Invoke("End", 2f);
+        }
 
+    }
+    private void End()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
     }
     void flip()
@@ -140,5 +152,6 @@ public class enemyai : MonoBehaviour
             health -= 20f;
         }
     }
+    
 
 }

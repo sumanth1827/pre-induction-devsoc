@@ -24,7 +24,7 @@ public class distance : MonoBehaviour
         if (Mathf.Abs(distance_away) > totaldist)
         {
             anim.SetBool("win", true);
-            Invoke("End", 0.5f);
+            Invoke("End", 2f);
         }
     }
     
@@ -32,7 +32,7 @@ public class distance : MonoBehaviour
 
     private void End()
     {  
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }
 
