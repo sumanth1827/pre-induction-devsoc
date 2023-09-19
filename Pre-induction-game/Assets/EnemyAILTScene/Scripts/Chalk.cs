@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Chalk : MonoBehaviour
 {
+	private Transform playerPos;
 	public Vector3 targetPos;
 	public float speed = 10;
 	public float arcHeight = 1;
@@ -12,10 +13,17 @@ public class Chalk : MonoBehaviour
 	void Start()
 	{
 		startPos = transform.position;
+		playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 	}
 
 	void Update()
 	{
+		if(playerPos.position.y < 5	){
+			speed = 50f;
+		}
+		else{
+			speed = 10f;
+		}
 		// Compute the next position, with arc added in
 		float x0 = startPos.x;
 		float x1 = targetPos.x;

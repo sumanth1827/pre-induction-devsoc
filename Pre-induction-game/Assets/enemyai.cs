@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using static UnityEngine.UI.Image;
 
 public class enemyai : MonoBehaviour
 {
+    // public Slider healthBar;
+    public GameObject healthBar;
+    public float health;
     GameObject player;
     Animator anim;
     float speed = 10f;
@@ -17,14 +21,16 @@ public class enemyai : MonoBehaviour
 
     [SerializeField] GameObject chalk;
     [SerializeField] Transform bounds;
+    bool facingright = false;
 
-    
-    
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        health = 200f;
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -56,27 +62,37 @@ public class enemyai : MonoBehaviour
             anim.SetBool("walk", false);
             anim.SetBool("attack", false);
         }
-        if (distance.x > 0)
+        if (distance.x > 0 && !facingright)
         {
-            sprite.flipX = true;
+            //sprite.flipX = true;
+            flip();
 
         }
-        else if (distance.y < 0)
+        else if (distance.x < 0 && facingright)
         {
-            sprite.flipX = false;
+            //sprite.flipX = false;
+            flip();
 
         }
 
+
+    }
+    void flip()
+    {
+        Vector3 currentscale = transform.localScale;
+        currentscale.x *= -1;
+        transform.localScale = currentscale;
+        facingright = !facingright;
     }
     private void FixedUpdate()
     {
-        if (distance.x > 10f || distance.x < -10f && !isagro)
+        if (distance.x > 10f || distance.x < -10f)
         {
             //anim.SetBool("attack", false);
             rb.velocity = new Vector2(distance.normalized.x * speed, 0f);
 
         }
-        else if(distance.x < 10f || distance.x > -10f && !isagro)
+        else
         {
             rb.velocity = Vector2.zero;
 
@@ -86,19 +102,26 @@ public class enemyai : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
 
+        // healthBar.value = ((health)/200f)*0.39f + 0.61f;
+        if(health >= 0){
+            healthBar.transform.localScale = new Vector3((health)/200f, 1, 1);
+        }
+        else{
+            healthBar.transform.localScale = new Vector3(0, 1, 1);
+        }
     }
     public void throw_chalk()
         {
         //Instantiate(chalk, throwpos.position, Quaternion.identity);
         var c = Instantiate(chalk, throwpos.position, Quaternion.identity);
         Chalk cb = c.GetComponent<Chalk>();
-        cb.targetPos = new Vector3(player.transform.position.x - (transform.position.x - player.transform.position.x), -5, 0);
-        cb.arcHeight = player.transform.position.y + 4;
+        cb.targetPos = new Vector3(player.transform.position.x - (transform.position.x - player.transform.position.x), -10, 0);
+        cb.arcHeight = player.transform.position.y + 9;
     }
     private IEnumerator behaviour(float timer)
     {
         yield return new WaitForSeconds(timer);
-        
+
         int time = Random.Range(2, 5);
         yield return new WaitForSeconds(time);
         isagro = true;
@@ -111,5 +134,11 @@ public class enemyai : MonoBehaviour
         StartCoroutine(behaviour(1f));
     }
 
+
+    void OnCollisionEnter2D(Collision2D col){
+        if(col.collider.tag == "playerAttacks"){
+            health -= 20f;
+        }
+    }
 
 }

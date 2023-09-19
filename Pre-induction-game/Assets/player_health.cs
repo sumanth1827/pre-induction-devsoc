@@ -14,7 +14,7 @@ public class player_health : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-       
+
         healthbar = GetComponentsInChildren<MicroBar>()[1];
         healthbar.Initialize(100f);
         anim = GetComponent<Animator>();
@@ -27,13 +27,13 @@ public class player_health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health > 0)
+        if (health > 0)
         {
             healthbar.UpdateHealthBar(health, true);
         }
-        else if(health <=0)
+        else if (health <= 0)
         {
-            anim.SetBool("death",true);
+            anim.SetBool("death", true);
             playermovement.instance.alive = false;
 
         }
