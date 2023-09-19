@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CatController : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class CatController : MonoBehaviour
     private int dosasFed = 0; // Counter for dosas fed to the cat.
     private bool isAttacking = false; // Flag to indicate if the cat is attacking.
     public Text timerText;
+    [SerializeField] Animator canvaspart;
    
 
 Animator anim;
@@ -81,16 +83,22 @@ Animator anim;
         Debug.Log("feeding");
      
         // Increment the dosas fed to the cat.
-        dosasFed =4;
+        dosasFed =10;
 
         // Reset the timer to restingTime seconds.
         timer = restingTime;
 
         // Check if the player has fed the cat at least 4 dosas.
-        if (dosasFed >= 4)
+        if (dosasFed >= 10)
         {
+            canvaspart.SetBool("win", true);
             // Implement logic for a win condition.
-            Debug.Log("You win!");
+            Invoke("nextlevel", 0.7f);
+            
         }
+    }
+    void nextlevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
