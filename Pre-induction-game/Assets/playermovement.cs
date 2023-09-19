@@ -20,6 +20,7 @@ public class playermovement : MonoBehaviour
     SpriteRenderer sprite;
     [SerializeField] LayerMask ground;
     Transform groundcheck;
+    
 
     //dashing
     bool candash = true, isdashing;
@@ -39,6 +40,13 @@ public class playermovement : MonoBehaviour
     Vector2 maindirection;
     [SerializeField] MicroBar launchbar;
     Transform shootpoint;
+
+    //couples
+    public bool hit = false;
+    Collider2D isHit;
+    [SerializeField] LayerMask couples;
+    Transform groundcheck2;
+    [SerializeField] float bounce = 7f;
 
     bool cam_move = false;
     // Start is called before the first frame update
@@ -66,6 +74,12 @@ public class playermovement : MonoBehaviour
         if (isdashing)
         {
             return;
+        }
+        isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
+        if (isHit != null)
+        {
+            rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            isHit.gameObject.GetComponent<couples>().hit = true;
         }
         walkInput = Input.GetAxisRaw("Horizontal");
         speed = grounded ? groundspeed : airspeed;
