@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class dogenemy : MonoBehaviour
@@ -13,12 +14,14 @@ public class dogenemy : MonoBehaviour
     [SerializeField] float jumpforce = 15f;
     float minchasedist = 25f;
     float attackdistance = 10f;
+    bool facingright = false;
 
     bool attacked = false;
     bool attackcooldown = false;
     bool firsttime = true;
 
-
+    [SerializeField] bool killedplayer = false;
+    public static dogenemy instance;
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -26,6 +29,7 @@ public class dogenemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         distance = new Vector2(player.transform.position.x - transform.position.x, transform.position.y);
+        instance = this;
     }
 
 
@@ -35,70 +39,90 @@ public class dogenemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (firsttime)
+        if (!killedplayer)
         {
-            minchasedist = 7f;
-            attackdistance = 1f;
-            
+            if (firsttime)
+            {
+                minchasedist = 7f;
+                attackdistance = 1f;
+
+            }
+            else
+            {
+                anim.SetBool("firsttime", true);
+                minchasedist = 25f;
+                attackdistance = 10f;
+            }
+            distance = new Vector2(player.transform.position.x - transform.position.x, transform.position.y);
+            if (distance.x > 0 && !facingright)
+            {
+                //sprite.flipX = true;
+                flip();
+
+            }
+            else if (distance.x < 0 && facingright)
+            {
+                //sprite.flipX = false;
+                flip();
+
+            }
         }
         else
         {
-            anim.SetBool("firsttime", true);
-            minchasedist = 25f;
-            attackdistance = 10f;
+            anim.SetBool("isMoving", false);
         }
-        distance = new Vector2(player.transform.position.x - transform.position.x, transform.position.y);
-        if (distance.x > 0)
+        if(player_health.instance.health <=0)
         {
-            sprite.flipX = true;
-
-        }
-        else if (distance.x < 0)
-        {
-            sprite.flipX = false;
-
+            killedplayer = true;
         }
 
-        
 
     }
-    
+    void flip()
+    {
+        Vector3 currentscale = transform.localScale;
+        currentscale.x *= -1;
+        transform.localScale = currentscale;
+        facingright = !facingright;
+    }
     private void FixedUpdate()
     {
-        
-        
-        if (Mathf.Abs(distance.x) < minchasedist && Mathf.Abs(distance.x) > attackdistance && !attackcooldown)
+        if (!killedplayer)
         {
-           
-               rb.velocity = new Vector2 (distance.normalized.x * speed, 0f);
-               anim.SetBool("isMoving", true);
-            
+
+            if (Mathf.Abs(distance.x) < minchasedist && Mathf.Abs(distance.x) > attackdistance && !attackcooldown)
+            {
+
+                rb.velocity = new Vector2(distance.normalized.x * speed, 0f);
+                anim.SetBool("isMoving", true);
+
                 firsttime = false;
-        }
-        else if(Mathf.Abs(distance.x) <= attackdistance && !attackcooldown)
-        {
-            anim.SetBool("isMoving", false);
-            anim.SetTrigger("isAttacking");
+            }
+            else if (Mathf.Abs(distance.x) <= attackdistance && !attackcooldown)
+            {
+                anim.SetBool("isMoving", false);
+                anim.SetTrigger("isAttacking");
 
-            attacked = true;
-            rb.velocity = new Vector2(distance.normalized.x * (speed + 5), rb.velocity.y);
-        }
-        else if(Mathf.Abs(distance.x) > minchasedist)
-        {
-            rb.velocity = Vector2.zero;
-            anim.SetBool("isMoving", false);
-        }
-        
+                attacked = true;
+                rb.velocity = new Vector2(distance.normalized.x * (speed + 5), rb.velocity.y);
+            }
+            else if (Mathf.Abs(distance.x) > minchasedist)
+            {
+                rb.velocity = Vector2.zero;
+                anim.SetBool("isMoving", false);
+            }
 
-        
-        if(attacked)
-        {
-          
-            rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
-            attacked = false;
-            attackcooldown = true;
-            
-            StartCoroutine(coolattack());
+
+
+            if (attacked)
+            {
+
+                rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
+                attacked = false;
+                attackcooldown = true;
+
+                StartCoroutine(coolattack());
+            }
         }
     }
 
@@ -106,7 +130,28 @@ public class dogenemy : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
+            player_health.instance.decreasehealth(5f);
 
+        }
+        if(collision.tag == "end")
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.tag == "Player")
+        {
+            dogenemy.instance.killedplayer = true;
+            killedplayer = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            dogenemy.instance.killedplayer = false;
+            killedplayer = false;
         }
     }
     IEnumerator coolattack()
@@ -115,4 +160,5 @@ public class dogenemy : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         attackcooldown = false;
     }
+    
 }

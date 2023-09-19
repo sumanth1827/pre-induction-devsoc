@@ -9,38 +9,32 @@ public class distance : MonoBehaviour
     [SerializeField] GameObject player;
 
     float distance_away;
+    [SerializeField] float totaldist = 500f;
+    [SerializeField] Animator anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         distance_away = player.transform.position.x - transform.position.x;
-        End();
+        if (Mathf.Abs(distance_away) > totaldist)
+        {
+            anim.SetBool("win", true);
+            Invoke("End", 0.5f);
+        }
     }
     
    
 
     private void End()
     {  
-        if (SceneManager.GetActiveScene().name == "D_spine_evening") 
-        {
-            if (distance_away < -200)
-            {
-                Debug.Log("WIN");
-            }
-        }
-
-        else 
-        {
-            if (distance_away > 200)
-            {
-                Debug.Log("WIN");
-            }
-        }
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         
     }
+
 }
+

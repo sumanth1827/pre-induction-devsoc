@@ -33,11 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
-        {
-            EndDialogue();
-            
-        }
+
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
@@ -55,9 +51,14 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (sentences.Count >= 0)
+            if (sentences.Count > 0)
             {
                 DisplayNextSentence();
+            }
+            if (sentences.Count == 0)
+            {
+                EndDialogue();
+
             }
         }
         

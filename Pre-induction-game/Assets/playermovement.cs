@@ -48,7 +48,8 @@ public class playermovement : MonoBehaviour
     Transform groundcheck2;
     [SerializeField] float bounce = 7f;
 
-    bool cam_move = false;
+    public bool alive = true;
+    [SerializeField] bool allowpaperball = false;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -76,72 +77,84 @@ public class playermovement : MonoBehaviour
         {
             return;
         }
-        isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
-        if (isHit != null)
+        if (alive)
         {
-            rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-            isHit.gameObject.GetComponent<couples>().hit = true;
-        }
-        walkInput = Input.GetAxisRaw("Horizontal");
-        speed = grounded ? groundspeed : airspeed;
-        mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 pos = transform.position;
-        maindirection = mouseposition - pos;
-        
-        if(walkInput > 0 )
-        {
-            sprite.flipX = false;
-            direction = 1;
-        }
-        else if(walkInput < 0 )
-        {
-            sprite.flipX = true;
-            direction = -1;
-        }
-        anim.SetBool("jump", grounded);
-        if (Input.GetKeyDown("space") && grounded)
-        {           
-            rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
-        }
- 
-        if(Input.GetKeyDown(KeyCode.LeftShift) && candash)
-        {
-            StartCoroutine(Dashing());
-        }
+            isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
+            if (isHit != null)
+            {
+                rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+                isHit.gameObject.GetComponent<couples>().hit = true;
+            }
+            walkInput = Input.GetAxisRaw("Horizontal");
+            speed = grounded ? groundspeed : airspeed;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            time = Time.time;
-            isloading = true;
-        }
-        if(isloading)
-        {
-            float holdtime  = Time.time - time;
-            launchbar.UpdateHealthBar(shoot(holdtime)-15f,true);
-        }
-        
-        if(Input.GetMouseButtonUp(0))
-        {
-            Debug.Log(Time.time - time);
-            if ((Time.time - time) > maxpowertime)
+            if (walkInput > 0)
             {
-                powertime = maxpowertime;
+                sprite.flipX = false;
+                direction = 1;
             }
-            else
+            else if (walkInput < 0)
             {
-                powertime = Time.time - time;
+                sprite.flipX = true;
+                direction = -1;
             }
-            float force;
-            force = shoot(powertime);
-            Debug.Log(shoot(powertime));
-            GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);           
-            newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized*force;
-            isloading = false;
-            launchbar.UpdateHealthBar(0f, true);
+            anim.SetBool("jump", grounded);
+            if (Input.GetKeyDown("space") && grounded)
+            {
+                rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && candash)
+            {
+                StartCoroutine(Dashing());
+            }
+
+
+
+
+            if(allowpaperball)
+            {
+                mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 pos = transform.position;
+                maindirection = mouseposition - pos;
+
+                if (Input.GetMouseButtonDown(0))
+                {
+                    time = Time.time;
+                    isloading = true;
+                }
+                if (isloading)
+                {
+                    float holdtime = Time.time - time;
+                    launchbar.UpdateHealthBar(shoot(holdtime) - 15f, true);
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    Debug.Log(Time.time - time);
+                    if ((Time.time - time) > maxpowertime)
+                    {
+                        powertime = maxpowertime;
+                    }
+                    else
+                    {
+                        powertime = Time.time - time;
+                    }
+                    float force;
+                    force = shoot(powertime);
+                    Debug.Log(shoot(powertime));
+                    GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);
+                    newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized * force;
+                    isloading = false;
+                    launchbar.UpdateHealthBar(0f, true);
+                }
+            }
+
+
         }
-    if(cam_move)
+        else
         {
-            Camera.main.transform.position = new Vector3(transform.position.x, 0f, Camera.main.transform.position.z);
+            anim.SetBool("jump", true);
+            anim.SetBool("walk", false);
         }
 
     }
@@ -151,23 +164,29 @@ public class playermovement : MonoBehaviour
         {
             return;
         }
-        grounded = Physics2D.OverlapCircle(groundcheck.position, 0.2f, ground);
-        
-        if (walkInput != 0f)
+        if (alive)
         {
-            anim.SetBool("walk", true);
-            rb.velocity = new Vector2(walkInput * speed, rb.velocity.y);
+            grounded = Physics2D.OverlapCircle(groundcheck.position, 0.2f, ground);
 
+            if (walkInput != 0f)
+            {
+                anim.SetBool("walk", true);
+                rb.velocity = new Vector2(walkInput * speed, rb.velocity.y);
+
+            }
+            else
+            {
+                anim.SetBool("walk", false);
+                if (rb.velocity.x != 0)
+                {
+                    rb.AddForce(new Vector2(-rb.velocity.x * walkDeceleration, 0));
+                }
+            }
         }
         else
         {
-            anim.SetBool("walk", false);
-            if (rb.velocity.x != 0)
-            {
-                rb.AddForce(new Vector2(-rb.velocity.x * walkDeceleration, 0));
-            }
+            rb.velocity = Vector2.zero;
         }
-
     }
 
     private IEnumerator Dashing()
@@ -195,19 +214,5 @@ public class playermovement : MonoBehaviour
         return force;
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.tag == "cam_move")
-        {
-            if(cam_move)
-            {
-                cam_move = false;
-            }
-            else 
-            {
-                cam_move = true;
-            }
-            
-        }
-    }
+
 }
