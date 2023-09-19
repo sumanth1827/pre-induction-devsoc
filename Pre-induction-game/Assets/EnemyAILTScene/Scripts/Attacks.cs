@@ -21,6 +21,7 @@ public class Attacks : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         if(col.tag == "Player"){
             Destroy(gameObject);
+            player_health.instance.decreasehealth(20f);
         }
         if (col.tag == "platform")
         {
