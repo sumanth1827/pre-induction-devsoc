@@ -16,6 +16,7 @@ public class freezer : MonoBehaviour
 
     public void Update()
     {
+       
         // Check for the key press to unfreeze the scene
         if (isSceneFrozen && Input.GetKeyDown(KeyCode.P))
         {

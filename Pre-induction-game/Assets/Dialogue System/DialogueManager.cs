@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         instance = this;
     }
+   
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -54,10 +55,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (sentences.Count > 0)
+            if (sentences.Count >= 0)
             {
                 DisplayNextSentence();
             }
         }
+        
     }
 }
