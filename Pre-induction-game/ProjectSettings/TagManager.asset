@@ -12,6 +12,9 @@ TagManager:
   - couples
   - spawner
   - end
+  - ground
+  - Dosa
+  - Cat
   layers:
   - Default
   - TransparentFX
@@ -24,6 +27,9 @@ TagManager:
   - platform
   - dog
   - couples
+  - 
+  - 
+  - 
   - 
   - 
   - 
