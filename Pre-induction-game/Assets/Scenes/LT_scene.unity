@@ -1265,11 +1265,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &619123036 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2558675665117965943, guid: 4c6e67c472921b442a89b9253a82aced, type: 3}
-  m_PrefabInstance: {fileID: 1572157777}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &639799452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cacddc73b194fd4da476f2cb3c7c0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthBar: {fileID: 1996057985}
+  healthBar: {fileID: 0}
   health: 0
   chalk: {fileID: 4889605335304666406, guid: 1dc26e6237d9f8646a74e8c3133c493b, type: 3}
   bounds: {fileID: 639799453}
@@ -2187,7 +2182,6 @@ GameObject:
   - component: {fileID: 1392985839}
   - component: {fileID: 1392985838}
   - component: {fileID: 1392985840}
-  - component: {fileID: 1392985842}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -2355,6 +2349,13 @@ MonoBehaviour:
   dashingpower: 40
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
   launchbar: {fileID: 1827701951}
+  hit: 0
+  couples:
+    serializedVersion: 2
+    m_Bits: 0
+  bounce: 7
+  alive: 1
+  allowpaperball: 0
 --- !u!96 &1392985840
 TrailRenderer:
   serializedVersion: 2
@@ -2472,20 +2473,6 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 0
---- !u!114 &1392985842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1392985833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57b3d5826b4d7e94c90639a56f0c0d73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  healthBar: {fileID: 619123036}
 --- !u!1001 &1422224850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3507,11 +3494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d779446027b6f034f9d448761b76a0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1996057985 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2558675665117965943, guid: 4c6e67c472921b442a89b9253a82aced, type: 3}
-  m_PrefabInstance: {fileID: 1625060507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2077057044
 GameObject:
   m_ObjectHideFlags: 0
