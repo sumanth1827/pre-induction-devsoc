@@ -8,6 +8,10 @@ TagManager:
   - Enemy
   - Attack
   - platform
+  - dogSpawner
+  - couples
+  - spawner
+  - end
   layers:
   - Default
   - TransparentFX
@@ -18,8 +22,8 @@ TagManager:
   - ball
   - Player
   - platform
-  - 
-  - 
+  - dog
+  - couples
   - 
   - 
   - 
