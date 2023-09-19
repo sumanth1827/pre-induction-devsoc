@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,6 +107,30 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -736,35 +760,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      normal_0: 2118977006
-      normal_1: 1008805931
-      normal_10: 1033458586
-      normal_11: 2131435889
-      normal_12: -467074709
-      normal_13: -1218064064
-      normal_14: -1437893787
-      normal_15: -1264329866
-      normal_16: -726168553
-      normal_17: -1336545063
-      normal_18: 1417937362
-      normal_19: 1639641292
-      normal_2: -1450788128
-      normal_20: -830747869
-      normal_21: -874020563
       normal_22: 1891505528
-      normal_23: 1007178067
-      normal_24: -717180558
-      normal_25: -99576716
-      normal_26: 598939975
-      normal_27: 1994991404
-      normal_28: 1885673059
-      normal_3: -1371445062
-      normal_4: 1863557620
-      normal_5: 1789159510
-      normal_6: 1128337508
       normal_7: 707437240
       normal_8: -1853431477
+      normal_12: -467074709
+      normal_13: -1218064064
+      normal_6: 1128337508
+      normal_21: -874020563
+      normal_5: 1789159510
+      normal_10: 1033458586
+      normal_3: -1371445062
+      normal_4: 1863557620
+      normal_18: 1417937362
+      normal_17: -1336545063
+      normal_23: 1007178067
+      normal_16: -726168553
+      normal_24: -717180558
+      normal_26: 598939975
+      normal_2: -1450788128
+      normal_27: 1994991404
+      normal_11: 2131435889
+      normal_15: -1264329866
+      normal_25: -99576716
+      normal_0: 2118977006
+      normal_1: 1008805931
+      normal_19: 1639641292
+      normal_28: 1885673059
       normal_9: 1320777302
+      normal_14: -1437893787
+      normal_20: -830747869
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
