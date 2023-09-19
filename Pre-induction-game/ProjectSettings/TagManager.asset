@@ -4,10 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - couples
-  - end
-  - spawner
-  - dogSpawner
+  - cam_move
+  - Enemy
+  - Attack
+  - platform
   layers:
   - Default
   - TransparentFX
@@ -17,8 +17,8 @@ TagManager:
   - UI
   - ball
   - Player
-  - couples
-  - dog
+  - platform
+  - 
   - 
   - 
   - 
