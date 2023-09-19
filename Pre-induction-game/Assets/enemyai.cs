@@ -21,9 +21,10 @@ public class enemyai : MonoBehaviour
 
     [SerializeField] GameObject chalk;
     [SerializeField] Transform bounds;
+    bool facingright = false;
 
-    
-    
+
+
 
 
     // Start is called before the first frame update
@@ -61,17 +62,27 @@ public class enemyai : MonoBehaviour
             anim.SetBool("walk", false);
             anim.SetBool("attack", false);
         }
-        if (distance.x > 0)
+        if (distance.x > 0 && !facingright)
         {
-            sprite.flipX = true;
+            //sprite.flipX = true;
+            flip();
 
         }
-        else if (distance.y < 0)
+        else if (distance.x < 0 && facingright)
         {
-            sprite.flipX = false;
+            //sprite.flipX = false;
+            flip();
 
         }
 
+
+    }
+    void flip()
+    {
+        Vector3 currentscale = transform.localScale;
+        currentscale.x *= -1;
+        transform.localScale = currentscale;
+        facingright = !facingright;
     }
     private void FixedUpdate()
     {
