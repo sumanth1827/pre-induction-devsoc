@@ -42,7 +42,7 @@ public class dogSpawner : MonoBehaviour
 
         
 
-        StartCoroutine(spawnEnemy(Random.Range(5f, 7f)));
+        StartCoroutine(spawnEnemy(Random.Range(3f, 6f)));
         
         
     }
