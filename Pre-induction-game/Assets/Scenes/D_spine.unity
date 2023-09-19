@@ -809,7 +809,7 @@ MonoBehaviour:
   hit: 0
   couples:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
   bounce: 7
 --- !u!95 &156022700
 Animator:
