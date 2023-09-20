@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Microlight.MicroBar;
-using UnityEngine.WSA;
+
 
 public class player_health : MonoBehaviour
 {
     [SerializeField] MicroBar healthbar;
     public float health = 100f;
+    public float totalhealth = 100f;
     public static player_health instance;
     Animator anim;
     [SerializeField] Animator canvasanim;
@@ -16,7 +17,7 @@ public class player_health : MonoBehaviour
     {
 
         healthbar = GetComponentsInChildren<MicroBar>()[1];
-        healthbar.Initialize(100f);
+        healthbar.Initialize(totalhealth);
         anim = GetComponent<Animator>();
     }
     void Start()

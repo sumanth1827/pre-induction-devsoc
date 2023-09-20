@@ -61,6 +61,7 @@ public class playermovement : MonoBehaviour
         groundcheck2 = GetComponentsInChildren<Transform>()[2];
         dashtrail = GetComponent<TrailRenderer>();
         launchbar.Initialize(20f);
+        Application.targetFrameRate = 300;
 
     }
     void Start()

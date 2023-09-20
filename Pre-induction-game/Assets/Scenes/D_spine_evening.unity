@@ -860,6 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbar: {fileID: 0}
   health: 100
+  totalhealth: 100
   canvasanim: {fileID: 506934496}
 --- !u!1001 &218246843
 PrefabInstance:
@@ -4049,6 +4050,7 @@ MonoBehaviour:
 
 '
     - Jump on couples to make them dissapear (PROBABLY WORKS IRL TOO)
+    - Let's run back to hostel now (Left)
     - LeT me just jump on them and get away from the dogs (Real).
 --- !u!4 &5736688406522809935
 Transform:
