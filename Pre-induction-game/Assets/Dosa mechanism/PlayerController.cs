@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
        
         // Update the UI Text to display the dosa counter value.
         // Convert dosaCounter to a string.
