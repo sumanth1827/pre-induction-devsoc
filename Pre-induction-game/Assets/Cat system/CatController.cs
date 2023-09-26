@@ -6,98 +6,103 @@ using UnityEngine.SceneManagement;
 
 public class CatController : MonoBehaviour
 {
-   // Reference to the cat's Animator component.
-    public float restingTime = 10f; // Time in seconds for the cat to rest.
-    public float movementSpeed = 2f; // Cat's movement speed when attacking.
-    public Transform playerTransform; // Reference to the player's transform.
+    public float restingTime = 10f;
+    public float movementSpeed = 2f;
+    public Transform playerTransform;
 
-    private float timer; // Timer to track resting time.
-    private int dosasFed = 0; // Counter for dosas fed to the cat.
-    private bool isAttacking = false; // Flag to indicate if the cat is attacking.
+    private float timer;
+    private int dosasFed = 0;
+    private bool isAttacking = false;
     public Text timerText;
     [SerializeField] Animator canvaspart;
-   
+    public player_health playerHealth;
+    private bool isTouchingPlayer = false;
+    private bool hasWon = false; // Track if the player has won.
 
-Animator anim;
+    Animator anim;
+
     void Start()
     {
         anim = GetComponent<Animator>();
-        // Initialize the timer.
         timer = restingTime;
+        playerHealth = FindObjectOfType<player_health>();
     }
 
     void Update()
     {
         timerText.text = "Timer: " + Mathf.Ceil(timer).ToString();
-        if (!isAttacking)
+
+        if (!isAttacking && !hasWon) // Check if the player has not won yet.
         {
-            // Decrement the timer while in the resting state.
             timer -= Time.deltaTime;
 
-            // If the timer reaches 0, switch to the attacking state.
+            float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+            if (distanceToPlayer < 1.0f)
+            {
+                isTouchingPlayer = true;
+            }
+            else
+            {
+                isTouchingPlayer = false;
+            }
+
             if (timer <= 0f)
             {
                 SwitchToAttackingState();
             }
         }
-        else
+        else if (!hasWon) // Check if the player has not won yet.
         {
-            if(Mathf.Abs(playerTransform.position.x-transform.position.x)<2f)
-            {
-                anim.SetBool("is_walking",false);
-                anim.SetBool("is_attacking",true);
-            }
+            anim.SetBool("is_attacking", true);
+            anim.SetBool("is_walking", false);
 
-            else{
-            anim.SetBool("is_attacking",false);
-            anim.SetBool("is_walking",true);
-
-            // Calculate the direction from the cat to the player.
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
-
-            // Calculate the target position (where the cat should move).
-            Vector3 targetPosition = transform.position + directionToPlayer * movementSpeed ;
-
-            // Move the cat smoothly towards the player.
+            Vector3 targetPosition = transform.position + directionToPlayer * movementSpeed;
             transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed);
-            }
 
-            if(playerTransform.position.x>transform.position.x)
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+            if (playerTransform.position.x > transform.position.x)
+                transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
             else
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
-         }
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
     }
 
-    // Method to switch to the attacking state.
     void SwitchToAttackingState()
     {
         isAttacking = true;
-       // Trigger the "Attacking" animation.
+        StartCoroutine(DamagePlayerOverTime());
     }
 
-    // Method to handle player interaction (feeding the cat).
-    public void FeedCat()
+    IEnumerator DamagePlayerOverTime()
     {
-        Debug.Log("feeding");
-     
-        // Increment the dosas fed to the cat.
-        dosasFed =10;
-
-        // Reset the timer to restingTime seconds.
-        timer = restingTime;
-
-        // Check if the player has fed the cat at least 4 dosas.
-        if (dosasFed >= 10)
+        while (isAttacking)
         {
-            canvaspart.SetBool("win", true);
-            // Implement logic for a win condition.
-            Invoke("nextlevel", 0.7f);
-            
+            playerHealth.decreasehealth(10f);
+            yield return new WaitForSeconds(1f);
         }
     }
-    void nextlevel()
+
+    public void FeedCat()
+    {
+        if (!hasWon) // Check if the player has not won yet.
+        {
+            Debug.Log("Feeding");
+
+            dosasFed++;  // Increment the dosas fed to the cat.
+            timer = Mathf.Max(restingTime - (dosasFed * 2), 2f);// Decrease timer by 2 seconds each time but ensure it's at least 2 seconds.
+
+            if (dosasFed >= 3) // Check if the player has fed 15 dosas.
+            {
+                canvaspart.SetBool("win", true);
+                hasWon = true; // Set the hasWon flag to true.
+                Invoke("NextLevel", 0.7f);
+            }
+            timer = Mathf.Max(restingTime - (dosasFed * 2), 2f);
+        }
+    }
+
+    void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
