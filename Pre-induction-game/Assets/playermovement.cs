@@ -80,12 +80,12 @@ public class playermovement : MonoBehaviour
         }
         if (alive)
         {
-            isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
-            if (isHit != null)
-            {
-                rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-                isHit.gameObject.GetComponent<couples>().hit = true;
-            }
+            // isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
+            // if (isHit != null)
+            // {
+            //     rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+            //     isHit.gameObject.GetComponent<couples>().hit = true;
+            // }
             walkInput = Input.GetAxisRaw("Horizontal");
             speed = grounded ? groundspeed : airspeed;
 

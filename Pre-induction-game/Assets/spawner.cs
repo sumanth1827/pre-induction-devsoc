@@ -9,6 +9,8 @@ public class spawner : MonoBehaviour
 {
     [SerializeField] private GameObject couple;
 
+    public Transform parentSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class spawner : MonoBehaviour
     }
     private IEnumerator spawnEnemy(float delayInSeconds)
     {
-        GameObject couples_pre = Instantiate(couple, transform.position, Quaternion.identity);
+        GameObject couples_pre = Instantiate(couple, transform.position, Quaternion.identity,parentSpawn);
         yield return new WaitForSeconds(delayInSeconds);
         StartCoroutine(spawnEnemy(Random.Range(4f, 6f)));
     }

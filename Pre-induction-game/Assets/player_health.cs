@@ -15,7 +15,6 @@ public class player_health : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-
         healthbar = GetComponentsInChildren<MicroBar>()[1];
         healthbar.Initialize(totalhealth);
         anim = GetComponent<Animator>();

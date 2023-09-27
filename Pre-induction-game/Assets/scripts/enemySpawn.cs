@@ -6,8 +6,10 @@ using UnityEngine;
 public class enemySpawn : MonoBehaviour
 {
     public float delayInSeconds = 1f;
+
     public GameObject spawner;
     Vector2 location;
+
     [SerializeField] GameObject spawn;
     void Start()
     {
