@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class couples : MonoBehaviour
 {
-    public bool hit = false;
+    // public bool hit = false;
     public float shrinkFactor = 0.8f;
     public float speed = 8f;
     public Rigidbody2D rb;
@@ -18,16 +19,17 @@ public class couples : MonoBehaviour
 
     void Update()
     {
+        
         EnemySpeed();
 
-        if (hit)
-        {
-            Transform objectTransform = gameObject.GetComponent<Transform>();
+        // if (hit)
+        // {
+        //     Transform objectTransform = gameObject.GetComponent<Transform>();
 
-            Vector3 newScale = new Vector3(objectTransform.localScale.x * shrinkFactor, objectTransform.localScale.y * shrinkFactor, objectTransform.localScale.z);
+        //     Vector3 newScale = new Vector3(objectTransform.localScale.x * shrinkFactor, objectTransform.localScale.y * shrinkFactor, objectTransform.localScale.z);
 
-            objectTransform.localScale = newScale;
-        }
+        //     objectTransform.localScale = newScale;
+        // }
     }
 
     private void EnemySpeed()
@@ -35,6 +37,14 @@ public class couples : MonoBehaviour
         Vector2 velocity = Vector2.right * speed;
 
         rb.velocity = velocity;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag =="playerAttacks")
+        {
+            speed*=(-1);
+        }
     }
 
 }
