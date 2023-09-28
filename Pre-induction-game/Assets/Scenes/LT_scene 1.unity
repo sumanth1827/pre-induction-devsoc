@@ -667,6 +667,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 844205996}
     m_Modifications:
+    - target: {fileID: 722120282, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 722120282, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 619437302766392670, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
       propertyPath: m_Name
       value: lt_4_platform_0 (16)
@@ -2497,6 +2505,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 844205996}
     m_Modifications:
+    - target: {fileID: 722120282, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 619437302766392670, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
       propertyPath: m_Name
       value: lt_4_platform_0 (11)
@@ -2742,6 +2754,7 @@ MonoBehaviour:
   dashingpower: 40
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
   launchbar: {fileID: 1827701951}
+  totaltime: 2
   hit: 0
   couples:
     serializedVersion: 2
