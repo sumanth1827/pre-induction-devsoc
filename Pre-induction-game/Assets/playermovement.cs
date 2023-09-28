@@ -12,14 +12,16 @@ public class playermovement : MonoBehaviour
     Rigidbody2D rb;
     float walkInput;
     [SerializeField] float airspeed = 9f, groundspeed = 7f, walkDeceleration = 20f, jumpforce = 15f;
-    bool grounded = false;
+    bool grounded = false,grounded2;
     float speed;
     Animator anim;
     int direction = 1;
 
     SpriteRenderer sprite;
     [SerializeField] LayerMask ground;
+    [SerializeField] LayerMask actground;
     Transform groundcheck;
+
     
 
     //dashing
@@ -80,7 +82,8 @@ public class playermovement : MonoBehaviour
         }
         if (alive)
         {
-            isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.3f, couples);
+
+            isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.5f, couples);
             if (isHit != null)
             {
                 rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
@@ -99,7 +102,7 @@ public class playermovement : MonoBehaviour
                 sprite.flipX = true;
                 direction = -1;
             }
-            anim.SetBool("jump", grounded);
+            anim.SetBool("jump", grounded2);
             if (Input.GetKeyDown("space") && grounded)
             {
                 rb.AddForce(new Vector2(rb.velocity.x, jumpforce), ForceMode2D.Impulse);
@@ -168,9 +171,12 @@ public class playermovement : MonoBehaviour
         if (alive)
         {
             grounded = Physics2D.OverlapCircle(groundcheck.position, 0.2f, ground);
+            grounded2 = Physics2D.OverlapCircle(groundcheck.position, 0.2f, actground);
 
-            if (walkInput != 0f)
+
+            if (walkInput != 0f || (rb.velocity.x != 0 && rb.velocity.y == 0f))
             {
+                
                 anim.SetBool("walk", true);
                 rb.velocity = new Vector2(walkInput * speed, rb.velocity.y);
 
@@ -178,6 +184,7 @@ public class playermovement : MonoBehaviour
             else
             {
                 anim.SetBool("walk", false);
+                
                 if (rb.velocity.x != 0)
                 {
                     rb.AddForce(new Vector2(-rb.velocity.x * walkDeceleration, 0));

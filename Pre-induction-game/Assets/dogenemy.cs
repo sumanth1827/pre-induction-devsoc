@@ -9,7 +9,7 @@ public class dogenemy : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
     Vector2 distance;
-    [SerializeField] float speed = 17f;
+    float speed = 17f;
     SpriteRenderer sprite;
     [SerializeField] float jumpforce = 15f;
     float minchasedist = 25f;
@@ -32,6 +32,11 @@ public class dogenemy : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        speed = Random.Range(20f, 25f);
+
+    }
 
     // Start is called before the first frame update
 
@@ -104,7 +109,7 @@ public class dogenemy : MonoBehaviour
                 anim.SetTrigger("isAttacking");
 
                 attacked = true;
-                rb.velocity = new Vector2(distance.normalized.x * (speed + 5), rb.velocity.y);
+                rb.velocity = new Vector2(distance.normalized.x * (speed +12f), rb.velocity.y);
             }
             else if (Mathf.Abs(distance.x) > minchasedist)
             {
@@ -142,16 +147,19 @@ public class dogenemy : MonoBehaviour
     {
         if(collision.tag == "Player")
         {
-            dogenemy.instance.killedplayer = true;
+            //dogenemy.instance.killedplayer = true;
+            rb.velocity = new Vector2(0f,rb.velocity.y);
             killedplayer = true;
         }
+
     }
+    
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            dogenemy.instance.killedplayer = false;
-            killedplayer = false;
+            //dogenemy.instance.killedplayer = false;
+           killedplayer = false;
         }
     }
     IEnumerator coolattack()

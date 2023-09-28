@@ -24,12 +24,16 @@ public class dogSpawner : MonoBehaviour
     {
 
         timer += Time.deltaTime;
-        if(timer> Random.Range(3f, 6f) && dogs.transform.childCount <= 3)
+
+
+    }
+    private void FixedUpdate()
+    {
+        if (timer > Random.Range(3f, 6f) && dogs.transform.childCount <= 2)
         {
             Instantiate(doggo, transform.position, Quaternion.identity, dogs.transform);
             timer = 0f;
         }
-
     }
 
 }
