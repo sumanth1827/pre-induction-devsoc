@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Room_scene 1.unity
     guid: 4b0478d4af369b640b547eb3594b5cc4
   - enabled: 1
-    path: Assets/Scenes/D_spine.unity
-    guid: bfe4fc9d601223844b30b5109d859cee
+    path: Assets/Scenes/D_spine 1.unity
+    guid: a14c71ac3bf6d43409b957c23121e909
   - enabled: 1
-    path: Assets/Scenes/LT_scene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/LT_scene 1.unity
+    guid: 86a70154f711d4f40b5725e85c9810cf
   - enabled: 1
-    path: Assets/Scenes/FK_scene.unity
-    guid: 463a07c7380eff146a73ace292b19946
+    path: Assets/Scenes/FK_scene_copy.unity
+    guid: 17d7031263470034aade483a5e60b715
   - enabled: 1
     path: Assets/Scenes/D_spine_evening.unity
     guid: 00e43bbe0fd558145874b8504a37429d

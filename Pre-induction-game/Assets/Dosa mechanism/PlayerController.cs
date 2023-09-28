@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
        
         // Update the UI Text to display the dosa counter value.
         // Convert dosaCounter to a string.
@@ -24,12 +25,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Dosa"))
+        if (dosaCounter <= 4)
         {
-            // Increment the dosa counter when the player touches a dosa.
-            dosaCounter++;
-            Debug.Log("Dosa Counter: " + dosaCounter);
-            DosaCounterText.text = "Dosa Count: " + dosaCounter.ToString();
+            if (collision.gameObject.CompareTag("Dosa"))
+            {
+                // Increment the dosa counter when the player touches a dosa.
+                dosaCounter++;
+                Debug.Log("Dosa Counter: " + dosaCounter);
+                DosaCounterText.text = "Dosa Count: " + dosaCounter.ToString();
+            }
         }
 
 
@@ -41,7 +45,7 @@ public class PlayerController : MonoBehaviour
 
 
                  catController.FeedCat();
-                dosaCounter = 0;
+                 dosaCounter = 0;
 
 
             }

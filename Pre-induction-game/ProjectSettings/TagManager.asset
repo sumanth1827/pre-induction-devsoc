@@ -15,6 +15,7 @@ TagManager:
   - ground
   - Dosa
   - Cat
+  - playerAttacks
   layers:
   - Default
   - TransparentFX
@@ -27,11 +28,8 @@ TagManager:
   - platform
   - dog
   - couples
-  - 
-  - 
-  - 
-  - 
-  - 
+  - dosa
+  - cat
   - 
   - 
   - 

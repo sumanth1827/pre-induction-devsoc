@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;
     public Queue<string> sentences;
     public static DialogueManager instance;
+    public Image imageToToggle;
     
 
     // Start is called before the first frame update
@@ -33,7 +34,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
-
+       
 
         string sentence = sentences.Dequeue();
         dialogueText.text = sentence;
@@ -43,7 +44,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End of conversation.");
         freezer.instance.UnfreezeScene();
-       
+        imageToToggle.gameObject.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -51,7 +53,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (sentences.Count > 0)
+            if (sentences.Count >0)
             {
                 DisplayNextSentence();
             }
