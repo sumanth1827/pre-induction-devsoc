@@ -41,7 +41,7 @@ public class playermovement : MonoBehaviour
     [SerializeField] MicroBar launchbar;
     Transform shootpoint;
     bool canshoot = true;
-    float totaltime = 2f;
+    [SerializeField] float totaltime = 2f;
 
     //couples
     public bool hit = false;
