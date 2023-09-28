@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Microlight.MicroBar;
+using static Unity.VisualScripting.Member;
 
 public class playermovement : MonoBehaviour
 {
@@ -33,15 +34,14 @@ public class playermovement : MonoBehaviour
 
     //shooting
     float time = 0f;
-    float powertime;
-    float maxpowertime = 0.5f;
     bool isloading;
     [SerializeField] GameObject paperball;
-    float launchspeed = 20f;
     Vector2 mouseposition;
     Vector2 maindirection;
     [SerializeField] MicroBar launchbar;
     Transform shootpoint;
+    bool canshoot = true;
+    float totaltime = 2f;
 
     //couples
     public bool hit = false;
@@ -62,7 +62,7 @@ public class playermovement : MonoBehaviour
         shootpoint = GetComponentsInChildren<Transform>()[3];
         groundcheck2 = GetComponentsInChildren<Transform>()[2];
         dashtrail = GetComponent<TrailRenderer>();
-        launchbar.Initialize(20f);
+        launchbar.Initialize(totaltime);
         Application.targetFrameRate = 300;
 
     }
@@ -121,36 +121,26 @@ public class playermovement : MonoBehaviour
                 mouseposition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 pos = transform.position;
                 maindirection = mouseposition - pos;
-
-                if (Input.GetMouseButtonDown(0))
+                if(Input.GetMouseButtonDown(0) && canshoot)
                 {
                     time = Time.time;
+                    GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);
+                    newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized * 35f;
+                    canshoot = false;
                     isloading = true;
                 }
-                if (isloading)
+                if(isloading)
                 {
                     float holdtime = Time.time - time;
-                    launchbar.UpdateHealthBar(shoot(holdtime) - 15f, true);
+                    launchbar.UpdateHealthBar(holdtime, true);
                 }
-                if (Input.GetMouseButtonUp(0))
+
+                if (Time.time - time > totaltime)
                 {
-                    Debug.Log(Time.time - time);
-                    if ((Time.time - time) > maxpowertime)
-                    {
-                        powertime = maxpowertime;
-                    }
-                    else
-                    {
-                        powertime = Time.time - time;
-                    }
-                    float force;
-                    force = shoot(powertime);
-                    Debug.Log(shoot(powertime));
-                    GameObject newball = Instantiate(paperball, shootpoint.position, transform.rotation);
-                    newball.GetComponent<Rigidbody2D>().velocity = maindirection.normalized * force;
+                    canshoot = true;
                     isloading = false;
-                    launchbar.UpdateHealthBar(0f, true);
                 }
+                
             }
 
 
@@ -213,14 +203,6 @@ public class playermovement : MonoBehaviour
         candash = true;
     }
 
-    private float shoot(float powertime)
-    {
-        float force;
-        float holdtimenormalized = Mathf.Clamp01(powertime / maxpowertime);
-        force = 15f + (holdtimenormalized * launchspeed);
-        
-        return force;
 
-    }
 
 }
