@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Chalk : MonoBehaviour
 {
 	private Transform playerPos;
+	private Transform profPos;
 	public Vector3 targetPos;
-	public float speed = 10;
+	public float speed = 10f;
 	public float arcHeight = 1;
 	private Vector3 startPos;
 
@@ -14,16 +16,17 @@ public class Chalk : MonoBehaviour
 	{
 		startPos = transform.position;
 		playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+		profPos = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+		if(playerPos.position.y < 5	){
+			speed =  Math.Abs(playerPos.position.x - profPos.position.x)*2.5f;
+		}
+		else{
+			speed =  Math.Abs(playerPos.position.x - profPos.position.x);
+		}
 	}
 
 	void Update()
 	{
-		if(playerPos.position.y < 5	){
-			speed = 50f;
-		}
-		else{
-			speed = 10f;
-		}
 		// Compute the next position, with arc added in
 		float x0 = startPos.x;
 		float x1 = targetPos.x;
