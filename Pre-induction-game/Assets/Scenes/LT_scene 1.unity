@@ -2750,7 +2750,7 @@ MonoBehaviour:
     m_Bits: 8
   actground:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1544
   dashingpower: 40
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
   launchbar: {fileID: 1827701951}
