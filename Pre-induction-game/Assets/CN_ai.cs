@@ -45,11 +45,15 @@ public class CN_ai : MonoBehaviour
                 
 
             }
-            if(collision.CompareTag("Player"))
-            {
-                player_health.instance.decreasehealth(20f);
-            }
+
         }
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            player_health.instance.decreasehealth(50f);
+        }
     }
 }

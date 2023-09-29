@@ -25,6 +25,7 @@ public class enemyai : MonoBehaviour
     [SerializeField] Transform bounds;
     bool facingright = false;
     [SerializeField] Animator endscene;
+  
 
 
 
@@ -113,10 +114,10 @@ public class enemyai : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
         }
-
+        
         // healthBar.value = ((health)/200f)*0.39f + 0.61f;
         if(health >= 0){
-            healthBar.transform.localScale = new Vector3((health)/200f, 1, 1);
+            healthBar.transform.localScale = new Vector3((health)/300f, 1, 1);
         }
         else{
             healthBar.transform.localScale = new Vector3(0, 1, 1);

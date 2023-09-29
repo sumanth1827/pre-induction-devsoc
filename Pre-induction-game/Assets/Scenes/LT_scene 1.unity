@@ -1773,6 +1773,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 844205996}
     m_Modifications:
+    - target: {fileID: 722120282, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 619437302766392670, guid: 30e57c7d80124bf4fa98fc38b31a09a8, type: 3}
       propertyPath: m_Name
       value: lt_4_platform_0 (5)
@@ -2429,7 +2433,7 @@ MonoBehaviour:
   health: 0
   chalk: {fileID: 4889605335304666406, guid: 1dc26e6237d9f8646a74e8c3133c493b, type: 3}
   bounds: {fileID: 639799453}
-  endscene: {fileID: 0}
+  endscene: {fileID: 1158719880}
 --- !u!50 &1222002387
 Rigidbody2D:
   serializedVersion: 4
