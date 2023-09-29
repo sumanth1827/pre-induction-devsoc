@@ -804,9 +804,13 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 8
+  actground:
+    serializedVersion: 2
+    m_Bits: 0
   dashingpower: 44
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
   launchbar: {fileID: 1857351501}
+  totaltime: 2
   hit: 0
   couples:
     serializedVersion: 2
