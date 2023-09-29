@@ -15,21 +15,41 @@ public class CN_ai : MonoBehaviour
     {
         
     }
-    bool broken = false;
+    bool broken = false,broker2 = false;
+    Animator breaker;
     private void OnTriggerStay2D(Collider2D collision)
     {
-       
-        if(collision.CompareTag("platform"))
+        
+
+    if(!broken)
         {
-            Debug.Log("Happpen");
-            var breaker = collision.gameObject.GetComponent<Animator>();
-            if (collision.CompareTag("Player") && !broken)
+            if (collision.CompareTag("platform"))
             {
-                Debug.Log("Happpen");
-                breaker.SetTrigger("break");
-                broken = true;
-               
+                
+                breaker = collision.gameObject.GetComponent<Animator>();
+                
+                broker2 = true;
+
+            }
+            if (collision.CompareTag("Player") && broker2)
+            {
+
+                // Debug.Log("Happpen2");
+                Debug.Log(breaker.gameObject.name);
+                if(breaker != null)
+                {
+                    breaker.SetTrigger("break");
+                    broken = true;
+                    broker2 = false;
+                }
+                
+
+            }
+            if(collision.CompareTag("Player"))
+            {
+                player_health.instance.decreasehealth(20f);
             }
         }
+
     }
 }

@@ -139,11 +139,11 @@ public class enemyai : MonoBehaviour
         isagro = true;
         anim.SetTrigger("agro");
         NC_spawner.instance.spawner(player.transform);
-        yield return new WaitForSeconds(1f);
-        NC_spawner.instance.spawner(player.transform);
-        yield return new WaitForSeconds(1f);
-        NC_spawner.instance.spawner(player.transform);
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(1f);
+        //NC_spawner.instance.spawner(player.transform);
+        //yield return new WaitForSeconds(1f);
+        //NC_spawner.instance.spawner(player.transform);
+        yield return new WaitForSeconds(2.5f);
         isagro = false;
         time = Random.Range(5, 10);
         yield return new WaitForSeconds(time);
