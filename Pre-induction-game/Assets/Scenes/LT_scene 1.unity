@@ -2429,7 +2429,7 @@ MonoBehaviour:
   health: 0
   chalk: {fileID: 4889605335304666406, guid: 1dc26e6237d9f8646a74e8c3133c493b, type: 3}
   bounds: {fileID: 639799453}
-  endscene: {fileID: 1158719880}
+  endscene: {fileID: 0}
 --- !u!50 &1222002387
 Rigidbody2D:
   serializedVersion: 4
@@ -2750,7 +2750,7 @@ MonoBehaviour:
     m_Bits: 8
   actground:
     serializedVersion: 2
-    m_Bits: 1544
+    m_Bits: 0
   dashingpower: 40
   paperball: {fileID: 1243015108557369738, guid: 5a5e836e1f4c2734f9f63ee8af62956a, type: 3}
   launchbar: {fileID: 1827701951}
