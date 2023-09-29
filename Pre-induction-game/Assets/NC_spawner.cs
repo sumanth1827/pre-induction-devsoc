@@ -19,13 +19,15 @@ public class NC_spawner : MonoBehaviour
     {
         
     }
-   public void spawner()
+   public void spawner(Transform pos)
     {
-        var v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y, self.position.y + 6f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
-        v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y+7f, self.position.y + 12f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
-        v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y + 13f, self.position.y + 18f)), Quaternion.identity);
-        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
+        var v = Instantiate(ncs, new Vector2(transform.position.x, pos.position.y), Quaternion.identity);
+        v.GetComponent<Rigidbody2D>().velocity = new Vector2(-40f, 0f);
+        v = Instantiate(ncs, new Vector2(pos.position.x, transform.position.y), Quaternion.identity);
+        v.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 40f);
+        // v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y+7f, self.position.y + 12f)), Quaternion.identity);
+        //  v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
+        // v = Instantiate(ncs, new Vector2(transform.position.x, Random.Range(self.position.y + 13f, self.position.y + 18f)), Quaternion.identity);
+        //v.GetComponent<Rigidbody2D>().velocity = new Vector2(-30f, 0f);
     }
 }

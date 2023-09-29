@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 904220834208088347}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.34120178, y: 6.2388577, z: -0.43}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 1.495, y: 1.495, z: 1.495}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!70 &861447661550543190
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -121,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.37, y: 0.65}
+  m_Offset: {x: 0.04637194, y: -0.0077276295}
+  m_Size: {x: 4.4304643, y: 1.9020095}
   m_Direction: 1
 --- !u!96 &1614360531
 TrailRenderer:

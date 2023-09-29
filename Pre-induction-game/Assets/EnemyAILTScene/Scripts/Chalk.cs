@@ -18,11 +18,20 @@ public class Chalk : MonoBehaviour
 
 	void Update()
 	{
-		if(playerPos.position.y < 5	){
+        if (Mathf.Abs(startPos.x - targetPos.x) < 4f)
+        {
+            speed = 5f;
+        }
+        if (playerPos.position.y < 5){
 			speed = 50f;
 		}
 		else{
 			speed = 10f;
+		}
+
+
+		{
+
 		}
 		// Compute the next position, with arc added in
 		float x0 = startPos.x;
