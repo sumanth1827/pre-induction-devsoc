@@ -87,7 +87,7 @@ public class playermovement : MonoBehaviour
             if (isHit != null)
             {
                 rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
-                isHit.gameObject.GetComponent<couples>().hit = true;
+                // isHit.gameObject.GetComponent<couples>().hit = true;
             }
             walkInput = Input.GetAxisRaw("Horizontal");
             speed = grounded ? groundspeed : airspeed;
