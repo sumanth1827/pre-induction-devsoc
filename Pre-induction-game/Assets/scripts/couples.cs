@@ -6,9 +6,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class couples : MonoBehaviour
 {
-    // public bool hit = false;
+    public bool hit = false;
+
+    public float rotationSpeed = 45f;
     public float shrinkFactor = 0.8f;
-    public float speed = 8f;
+    public float speedX = 8f;
+    public float speedY=0f;
     public Rigidbody2D rb;
     public GameObject end;
 
@@ -22,6 +25,11 @@ public class couples : MonoBehaviour
         
         EnemySpeed();
 
+        if(hit)
+        {
+            transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
+        }
+
         // if (hit)
         // {
         //     Transform objectTransform = gameObject.GetComponent<Transform>();
@@ -34,16 +42,18 @@ public class couples : MonoBehaviour
 
     private void EnemySpeed()
     {
-        Vector2 velocity = Vector2.right * speed;
+        Vector2 velocity = Vector2.right * speedX;
 
-        rb.velocity = velocity;
+        rb.velocity = new Vector2(speedX,speedY);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag =="playerAttacks")
         {
-            speed*=(-1);
+            hit =true;
+            speedX*=(-1);
+            speedY = speedX *-1;
         }
     }
 

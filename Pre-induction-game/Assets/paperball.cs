@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class paperball : MonoBehaviour
@@ -26,5 +27,13 @@ public class paperball : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);    
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag == "couples" || collision.tag == "ground")
+        {
+            Destroy(gameObject);
+        }
     }
 }
