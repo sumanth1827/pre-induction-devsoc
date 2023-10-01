@@ -18,6 +18,7 @@ public class finish : MonoBehaviour
     }
     void next()
     {
+        score.cg -= score.CgReduction;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
