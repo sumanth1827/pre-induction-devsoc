@@ -34,7 +34,7 @@ public class dogenemy : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(20f, 25f);
+        speed = Random.Range(24f, 28f);
 
     }
 
@@ -48,8 +48,8 @@ public class dogenemy : MonoBehaviour
         {
             if (firsttime)
             {
-                minchasedist = 7f;
-                attackdistance = 1f;
+                minchasedist = 15f;
+                attackdistance = 5f;
 
             }
             else
