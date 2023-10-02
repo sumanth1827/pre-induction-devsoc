@@ -79,12 +79,18 @@ public class enemyai : MonoBehaviour
         }
         if(health <= 0)
         {
-            score.cg += cgIncrease; //to increase cg on killing prof
+            IncreaseCGonDeath();
             playermovement.instance.alive = false;
             endscene.SetBool("win", true);
             Invoke("End", 2f);
         }
 
+    }
+
+    void IncreaseCGonDeath()
+    {
+        if(playermovement.instance.alive)
+        score.cg += cgIncrease; //to increase cg on killing prof
     }
     private void End()
     {

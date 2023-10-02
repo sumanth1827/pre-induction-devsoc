@@ -3,7 +3,7 @@ using TMPro;
 public class score : MonoBehaviour
 {
     public TMP_Text tmp;
-    public static float cg=9f;
+    public static float cg=10f;
     public static float retryPenalty = 0.2f;
     public static float bitePenalty = 0.1f;
 
