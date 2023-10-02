@@ -3,13 +3,9 @@ using TMPro;
 public class score : MonoBehaviour
 {
     public TMP_Text tmp;
-    public static float cg=7f;
-    public float InitialCg = 7f;
-    public static float CgReduction = 0.2f;
-    void Start()
-    {
-        
-    }
+    public static float cg=9f;
+    public static float retryPenalty = 0.2f;
+    public static float bitePenalty = 0.1f;
 
     void Update()
     {
@@ -18,6 +14,6 @@ public class score : MonoBehaviour
         else if(cg<0f)
         cg=0f;
         else
-        tmp.text = "CGPA : "+cg;
+        tmp.text = "Your CG : "+cg.ToString("0.0");
     }
 }

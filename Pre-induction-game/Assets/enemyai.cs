@@ -26,7 +26,7 @@ public class enemyai : MonoBehaviour
     bool facingright = false;
     [SerializeField] Animator endscene;
   
-
+    public float cgIncrease = 1f;
 
 
 
@@ -79,6 +79,7 @@ public class enemyai : MonoBehaviour
         }
         if(health <= 0)
         {
+            score.cg += cgIncrease; //to increase cg on killing prof
             playermovement.instance.alive = false;
             endscene.SetBool("win", true);
             Invoke("End", 2f);

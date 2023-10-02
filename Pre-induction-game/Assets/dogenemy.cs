@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class dogenemy : MonoBehaviour
 {
@@ -136,7 +137,7 @@ public class dogenemy : MonoBehaviour
         if(collision.tag == "Player")
         {
             player_health.instance.decreasehealth(5f);
-
+            score.cg -= score.bitePenalty; // reducing cg after every dog bite
         }
         if(collision.tag == "end")
         {
