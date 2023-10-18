@@ -18,10 +18,20 @@ public class Chalk : MonoBehaviour
 		playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		profPos = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
 		if(playerPos.position.y < 5	){
-			speed =  Math.Abs(playerPos.position.x - profPos.position.x)*2.5f;
+			if(Math.Abs(playerPos.position.x - profPos.position.x) < 1){
+				speed =  0.5f;
+			}
+			else{
+				speed =  Math.Abs(playerPos.position.x - profPos.position.x) * 2.5f;
+			}
 		}
 		else{
-			speed =  Math.Abs(playerPos.position.x - profPos.position.x);
+			if(Math.Abs(playerPos.position.x - profPos.position.x) < 1){
+				speed =  0.5f;
+			}
+			else{
+				speed =  Math.Abs(playerPos.position.x - profPos.position.x);
+			}
 		}
 	}
 
