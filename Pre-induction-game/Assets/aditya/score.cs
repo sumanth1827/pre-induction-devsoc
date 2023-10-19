@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+
 public class score : MonoBehaviour
 {
     public TMP_Text tmp;
@@ -14,6 +15,6 @@ public class score : MonoBehaviour
         else if(cg<0f)
         cg=0f;
         else
-        tmp.text = "Your CG : "+cg.ToString("0.0");
+        tmp.text = "YOUR CG  "+cg.ToString("0.0");
     }
 }
