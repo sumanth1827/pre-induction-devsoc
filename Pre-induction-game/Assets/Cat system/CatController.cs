@@ -30,13 +30,15 @@ public class CatController : MonoBehaviour
 
     void Update()
     {
+
         timerText.text = "Timer: " + Mathf.Ceil(timer).ToString();
 
         if (!isAttacking && !hasWon) // Check if the player has not won yet.
         {
             timer -= Time.deltaTime;
-
             float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+
 
             if (distanceToPlayer < 1.0f)
             {
@@ -66,6 +68,7 @@ public class CatController : MonoBehaviour
             else
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
+
     }
 
     void SwitchToAttackingState()
@@ -78,10 +81,16 @@ public class CatController : MonoBehaviour
     {
         while (isAttacking)
         {
-            playerHealth.decreasehealth(10f);
-            yield return new WaitForSeconds(1f);
+            float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+            timer = 0;
+            if (distanceToPlayer < 2.0f)
+            {
+                playerHealth.decreasehealth(8f);
+            }
+            yield return new WaitForSeconds(0.2f);
         }
     }
+
 
     public void FeedCat()
     {
@@ -92,7 +101,7 @@ public class CatController : MonoBehaviour
             dosasFed++;  // Increment the dosas fed to the cat.
             timer = Mathf.Max(restingTime - (dosasFed * 2), 2f);// Decrease timer by 2 seconds each time but ensure it's at least 2 seconds.
 
-            if (dosasFed >= 5) // Check if the player has fed 15 dosas.
+            if (dosasFed >= 4) // Check if the player has fed 15 dosas.
             {
                 canvaspart.SetBool("win", true);
                 hasWon = true; // Set the hasWon flag to true.

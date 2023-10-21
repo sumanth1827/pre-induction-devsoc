@@ -2584,12 +2584,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b695edef7fc8294987d08282a2af419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restingTime: 18
-  movementSpeed: 0.2
+  restingTime: 15
+  movementSpeed: 0.21
   playerTransform: {fileID: 211605418}
   timerText: {fileID: 944396112}
   canvaspart: {fileID: 1544228312}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 211605419}
 --- !u!70 &419033474
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -22821,6 +22821,10 @@ PrefabInstance:
     - target: {fileID: 7780265437690168476, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7780265437690168476, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7780265438462877216, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
