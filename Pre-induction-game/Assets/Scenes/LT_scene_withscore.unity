@@ -2414,6 +2414,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1222002384
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2682,6 +2683,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &1392985835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3602,10 +3604,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 427880864}
     m_Modifications:
-    - target: {fileID: 2051387064, guid: 89f317d514e12b944bd3b90df1baf0b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9127243242666794352, guid: 89f317d514e12b944bd3b90df1baf0b2, type: 3}
       propertyPath: m_Name
       value: cgpa
@@ -4163,6 +4161,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1952465976
 MonoBehaviour:
   m_ObjectHideFlags: 0
