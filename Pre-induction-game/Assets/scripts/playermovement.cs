@@ -13,7 +13,7 @@ public class playermovement : MonoBehaviour
     Rigidbody2D rb;
     float walkInput;
     [SerializeField] float airspeed = 9f, groundspeed = 7f, walkDeceleration = 20f, jumpforce = 15f;
-    bool grounded = false,grounded2;
+   public bool grounded = false,grounded2;
     float speed;
     Animator anim;
     int direction = 1;
@@ -52,6 +52,8 @@ public class playermovement : MonoBehaviour
 
     public bool alive = true;
     [SerializeField] bool allowpaperball = false;
+
+   
     // Start is called before the first frame update
     private void Awake()
     {
