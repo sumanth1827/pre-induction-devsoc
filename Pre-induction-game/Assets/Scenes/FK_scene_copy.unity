@@ -23382,6 +23382,10 @@ PrefabInstance:
       propertyPath: couples.m_Bits
       value: 1024
       objectReference: {fileID: 0}
+    - target: {fileID: 2442361204140738515, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
+      propertyPath: actground.m_Bits
+      value: 1544
+      objectReference: {fileID: 0}
     - target: {fileID: 2442361204140738517, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
       propertyPath: m_Name
       value: Player 1
