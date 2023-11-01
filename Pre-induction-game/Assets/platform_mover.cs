@@ -20,11 +20,11 @@ public class platform_mover : MonoBehaviour
     void Update()
     {
         float pingPong = Mathf.PingPong(Time.time * speed, 1);
-        transform.position = Vector3.Lerp(frompos,topos, pingPong);
+        transform.position = Vector3.Lerp(frompos, topos, pingPong);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(transform);
         }
