@@ -11,14 +11,14 @@ public class DosaCollisionHandler : MonoBehaviour
         dosaThrower = thrower;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("ground"))
+        if (collision.CompareTag("ground"))
         {
             // Destroy the dosa when it touches the ground.
             Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Player"))
+        else if (collision.CompareTag("Player"))
         {
             // Check if dosaThrower is not null before calling the method.
             if (dosaThrower != null)

@@ -61,7 +61,11 @@ public class CatController : MonoBehaviour
 
             Vector3 directionToPlayer = (playerTransform.position - transform.position).normalized;
             Vector3 targetPosition = transform.position + directionToPlayer * movementSpeed;
-            transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed);
+            if(!isTouchingPlayer)
+            {
+                transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed);
+
+            }
 
             if (playerTransform.position.x > transform.position.x)
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
