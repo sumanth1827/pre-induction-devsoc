@@ -2250,6 +2250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DosaCounterText: {fileID: 1100813292}
   catController: {fileID: 419033473}
+  dosas: {fileID: 482159999946299752, guid: a541ab29731f9e94e8532f2059c2f177, type: 3}
 --- !u!4 &211605418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2442361204140738513, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
@@ -21695,7 +21696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739066338}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.14, y: 7.43, z: -1.1296291}
+  m_LocalPosition: {x: 3.21, y: 7.43, z: -1.1296291}
   m_LocalScale: {x: 0.87990296, y: 0.8875928, z: 0.81438}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21754,14 +21755,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739066338}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c5ba59647eb6e7469e75b67517334e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
-  offsetx: 8
-  offsety: 0
+  speed: 1
+  offsetx: 0
+  offsety: 8
 --- !u!212 &739066343
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21954,14 +21955,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861711965}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c5ba59647eb6e7469e75b67517334e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  offsetx: 8
-  offsety: 0
+  offsetx: 0
+  offsety: 8
 --- !u!251 &861711969
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -23020,7 +23021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1100729027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -30.39, y: 3.8900003, z: 1.4112093}
+  m_LocalPosition: {x: -30.39, y: -6.87, z: 1.4112093}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23098,7 +23099,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '
+
+'
 --- !u!222 &1100813293
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24167,8 +24170,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dosaPrefab: {fileID: 1343627941}
   throwPoint: {fileID: 1930918477}
-  throwSpeed: 40
-  throwRegionMin: {x: -40, y: 3.89}
+  throwSpeed: 20
+  throwRegionMin: {x: -30, y: -7}
   throwRegionMax: {x: -12, y: 3.89}
   throwtimer: 1
   player: {fileID: 211605418}
@@ -25080,6 +25083,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 482159999946299748, guid: 8b09f5146db7c5549aa257cd776927f3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 482159999946299748, guid: 8b09f5146db7c5549aa257cd776927f3, type: 3}
       propertyPath: catController
       value: 
       objectReference: {fileID: 419033473}
@@ -25139,5 +25146,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 482159999946299748, guid: 8b09f5146db7c5549aa257cd776927f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b09f5146db7c5549aa257cd776927f3, type: 3}

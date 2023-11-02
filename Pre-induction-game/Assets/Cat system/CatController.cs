@@ -66,6 +66,10 @@ public class CatController : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position, targetPosition, movementSpeed);
 
             }
+            else
+            {
+                transform.position = transform.position;
+            }
 
             if (playerTransform.position.x > transform.position.x)
                 transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
@@ -108,6 +112,7 @@ public class CatController : MonoBehaviour
             if (dosasFed >= 4) // Check if the player has fed 15 dosas.
             {
                 canvaspart.SetBool("win", true);
+                Debug.Log("haswonapparent");
                 hasWon = true; // Set the hasWon flag to true.
                 Invoke("NextLevel", 0.7f);
             }
