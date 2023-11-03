@@ -57,6 +57,7 @@ public class playermovement : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
+        
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>(); 
         sprite = GetComponent<SpriteRenderer>();
@@ -70,7 +71,7 @@ public class playermovement : MonoBehaviour
     }
     void Start()
     {
-        Time.timeScale = 0f;
+        
         instance = this;
         launchbar.UpdateHealthBar(0f, true);
     }
@@ -78,7 +79,7 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(Time.timeScale);
         if (isdashing)
         {
             return;
