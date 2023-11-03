@@ -1294,7 +1294,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15.1
+  orthographic size: 15.91
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1318,7 +1318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.277816, y: 7.5057497, z: -10}
+  m_LocalPosition: {x: 8.557567, y: 6.9656, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1458,8 +1458,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606685681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.3652, y: 6.7, z: 0}
-  m_LocalScale: {x: 3.1345713, y: 2.487323, z: 2.487323}
+  m_LocalPosition: {x: 8.5921, y: 6.7657, z: 0}
+  m_LocalScale: {x: 3.296282, y: 2.497521, z: 2.487323}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1710,11 +1710,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -23.56187, y: 27.535702}
-      - {x: -23.471716, y: -4.2521296}
+    - - {x: -24.664482, y: 27.741299}
+      - {x: -24.693972, y: -4.485718}
       - {x: -0.87285656, y: -4.514949}
-      - {x: 30.33026, y: -4.4199247}
-      - {x: 30.284016, y: 27.378977}
+      - {x: 31.953697, y: -4.444412}
+      - {x: 31.85814, y: 27.712893}
 --- !u!4 &812384907
 Transform:
   m_ObjectHideFlags: 0
@@ -3931,7 +3931,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1392985837}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 15.1
+    OrthographicSize: 15.91
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -4192,8 +4192,12 @@ MonoBehaviour:
   dialogue:
     name: Bitsian
     sentences:
-    - '**Gets yeeted by chalks**'
-    - press and hold 'Left mouse button' to shoot paper balls
+    - What....is...this...
+    - Am I in a dream.......
+    - The three headed dog is throwing rubber balls at me. I think the safest thing
+      to do here is to dodge it
+    - I think I have a few paperballs in my bag. They should help
+    - tap right click to throw paper ball where the mouse is pointing
     - press and hold 'Left mouse button' to shoot paper balls
 --- !u!4 &1952465977
 Transform:
