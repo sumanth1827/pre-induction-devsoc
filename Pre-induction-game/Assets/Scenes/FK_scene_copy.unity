@@ -3400,7 +3400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.799934, y: -2.96958, z: -10}
+  m_LocalPosition: {x: -22.929464, y: -2.96807, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22728,6 +22728,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5953074147349940673, guid: b25425def0e15c24d9ad2f6ccd542f4a, type: 3}
+      propertyPath: m_text
+      value: THE CAT IS WELL FED!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8252926478718397340, guid: b25425def0e15c24d9ad2f6ccd542f4a, type: 3}
+      propertyPath: m_text
+      value: 'YOU MADE THE CAT ANGRY
+
+        TRY AGAIN'
+      objectReference: {fileID: 0}
     - target: {fileID: 8252926478889189059, guid: b25425def0e15c24d9ad2f6ccd542f4a, type: 3}
       propertyPath: m_Name
       value: Canvas (1)
@@ -22846,12 +22856,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4946953382321142873, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 474.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4946953382321142873, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 51.9678
+      value: 77.468
       objectReference: {fileID: 0}
     - target: {fileID: 4946953382321142873, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.4839
+      value: -11.266
       objectReference: {fileID: 0}
     - target: {fileID: 4946953382855405096, guid: 4021453168e2e4046adc9d0175e17a90, type: 3}
       propertyPath: m_Pivot.x
@@ -23206,7 +23220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1116636263
 Transform:
   m_ObjectHideFlags: 0
@@ -24003,16 +24017,13 @@ MonoBehaviour:
   dialogue:
     name: Bitsian
     sentences:
-    - Aww,there's a cat here. It looks hungry.
-    - Let me feed it some dosas :)
-    - THIS WAS PERFORMED UNDER professional supervision. please for the love of god
-      do not feed cats dosas!!
-    - she looks pissed...
-    - i think she's going to attack me if i don't feed it.
-    - 'Go near the cat to feed it
-
-      (It eats 4 dosas at a time,hurry!! feed
-      it before the timer runs out)'
+    - Oh look, there a cat here
+    - It looks hungry
+    - Let me feed it some dosas
+    - PLEASE DO NOT FEED DOSAS TO CATS IN REAL LIFE
+    - Fk is quite rush as usual. I gotta catch my dosas quickly before the cat gets
+      angry at me
+    - Go near the cat and feed it
     - SCENE START
 --- !u!95 &1438149019
 Animator:
@@ -24087,11 +24098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2442361204140738513, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.8
+      value: -23.16
       objectReference: {fileID: 0}
     - target: {fileID: 2442361204140738513, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -7.1
       objectReference: {fileID: 0}
     - target: {fileID: 2442361204140738513, guid: 06e8a58a39aeae4429663bb073e2c54d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25016,7 +25027,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1892601254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.8, y: -3, z: -10}
+  m_LocalPosition: {x: -23.16, y: -7.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

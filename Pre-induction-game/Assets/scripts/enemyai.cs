@@ -33,7 +33,7 @@ public class enemyai : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 300f;
+        health = 200f;
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
@@ -82,7 +82,7 @@ public class enemyai : MonoBehaviour
             IncreaseCGonDeath();
             playermovement.instance.alive = false;
             endscene.SetBool("win", true);
-            Invoke("End", 2f);
+            Invoke("End", 3f);
         }
 
     }
@@ -124,7 +124,7 @@ public class enemyai : MonoBehaviour
         
         // healthBar.value = ((health)/200f)*0.39f + 0.61f;
         if(health >= 0){
-            healthBar.transform.localScale = new Vector3((health)/300f, 1, 1);
+            healthBar.transform.localScale = new Vector3((health)/200f, 1, 1);
         }
         else{
             healthBar.transform.localScale = new Vector3(0, 1, 1);

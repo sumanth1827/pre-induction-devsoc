@@ -21,8 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/FK_scene_copy.unity
     guid: 17d7031263470034aade483a5e60b715
   - enabled: 1
-    path: Assets/Scenes/D_spine_evening.unity
-    guid: 00e43bbe0fd558145874b8504a37429d
+    path: Assets/Scenes/bdome_expt.unity
+    guid: a46c70ae91f9b7248af3df8b54c31247
   - enabled: 1
     path: Assets/Scenes/Room_scene(Ending).unity
     guid: d24e12a77c055604aa4136f8911e2d98

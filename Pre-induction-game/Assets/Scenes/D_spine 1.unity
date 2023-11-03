@@ -4475,6 +4475,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 156022696}
+    - target: {fileID: 5993182391222912561, guid: a959461cfce65f64e84a57e4ef158740, type: 3}
+      propertyPath: totaldist
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 5993182391222912562, guid: a959461cfce65f64e84a57e4ef158740, type: 3}
       propertyPath: m_Name
       value: startpoint
@@ -4778,15 +4782,10 @@ MonoBehaviour:
   dialogue:
     name: Bitsian
     sentences:
-    - '*It DID GET WORSE*'
-    - '*You stepped on a Dog''s tail and now it has called its entire extended family
-      to come after you*'
-    - I need to avoid the dogs at any cost
-    - Luckily i have developed the ability to dash forward from bad situations really
-      quickly
-    - 'Press ''LEFT SHIFT'' key to dash '
-    - DO TRICKY MANEUVERS TO AVOID THE DOG
-    - Now RUN away form the dogs (Right)
+    - Our campus is filled with so many friendly dogs and cats.
+    - But I can't pet all of them. Time to run to class
+    - Avoid the dogs
+    - Use *Left shift* to dash
     - 'Press ''Shift'' key to dash '
 --- !u!114 &7840797455266736805
 MonoBehaviour:
