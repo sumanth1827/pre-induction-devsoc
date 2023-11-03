@@ -17,9 +17,9 @@ public class timer : MonoBehaviour
         minPassed = (int)(time*duration_inMin/duration_inSec);
         minutes = startTime+minPassed;
         if(minutes<10)
-        tmp.text = "8:0"+(minutes);
+        tmp.text = "7:0"+(minutes);
         else
-        tmp.text = "8:"+(minutes);
+        tmp.text = "7:"+(minutes);
 
         if(minPassed>=duration_inMin)
         anim.SetBool("timeup",true);

@@ -108,7 +108,7 @@ public class CatController : MonoBehaviour
         {
             Debug.Log("Feeding");
 
-            dosasFed++;  // Increment the dosas fed to the cat.
+             // Increment the dosas fed to the cat.
                          // timer = Mathf.Max(restingTime - (dosasFed * 2), 2f);// Decrease timer by 2 seconds each time but ensure it's at least 2 seconds.
             timer -= dosacount*2;
             if (gametimer >= 35f) // Check if the player has fed 15 dosas.
