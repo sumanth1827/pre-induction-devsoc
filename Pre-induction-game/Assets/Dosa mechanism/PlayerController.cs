@@ -5,14 +5,19 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    private int dosaCounter = 0;
+    int dosaCounter = 0;
     public Text DosaCounterText;
     public CatController catController;
     [SerializeField] GameObject dosas;
     float disttocat;
     Vector2 directiontocat;
-    int dosastothrow = 0;
+    
+    bool feedable = true;
 
+    private void Awake()
+    {
+        disttocat = Vector2.Distance(transform.position, catController.transform.position);
+    }
     void Start()
     {
         // Initialize the dosa counter.
@@ -23,78 +28,71 @@ public class PlayerController : MonoBehaviour
     {
         disttocat = Vector2.Distance(transform.position, catController.transform.position);
         directiontocat = (transform.position - catController.transform.position).normalized;
+        DosaCounterText.text = "Dosas Caught: " + dosaCounter.ToString();
+        
 
 
-        
-        
         // Update the UI Text to display the dosa counter value.
         // Convert dosaCounter to a string.
     }
     private void FixedUpdate()
     {
-        if (dosaCounter > 4)
+       
         {
             
-            if (disttocat < 10f && dosastothrow > 0)
+            if (disttocat < 5f && feedable)
             {
 
+               
 
-
-                catController.FeedCat();
+                //catController.FeedCat(dosaCounter);
 
                 StartCoroutine(thrower());
                 
-                dosaCounter = 0;
-
+                //dosaCounter = 0;
+                //feedable = false;
 
             }
         }
     }
     IEnumerator thrower()
     {
-        yield return null;
-        GameObject dosa = Instantiate(dosas, transform.position, Quaternion.identity);
-        dosa.GetComponent<Rigidbody2D>().velocity = -directiontocat * 30f;
-        dosastothrow--;
-        if(dosastothrow > 0)
+
+        while(dosaCounter >0)
         {
-            yield return new WaitForSeconds(1f);
-            StartCoroutine(thrower());
+            
+            feedable = false;
+            GameObject dosa = Instantiate(dosas, transform.position, Quaternion.identity);
+            dosa.GetComponent<Rigidbody2D>().velocity = -directiontocat * 30f;
+            catController.FeedCat(1);
+            dosaCounter = dosaCounter - 1;
+            
+            yield return new WaitForSeconds(0.5f);
+        }
+        if(dosaCounter> 0)
+        {
+            //yield return new WaitForSeconds(0.3f);
+           // StartCoroutine(thrower());
+        }
+        if(dosaCounter <= 0)
+        {
+            
+            feedable = true;
+            yield return null;
         }
     }
-    /* private void OnCollisionEnter2D(Collision2D collision)
-     {
-         if (dosaCounter > 4)
-         {
-             if (collision.gameObject.CompareTag("Cat"))
-             {
 
-
-
-                 catController.FeedCat();
-                 for(int i = 0; i < dosaCounter; i++)
-                 {
-                    GameObject dosa = Instantiate(dosas,transform.position, Quaternion.identity);
-                     dosa.GetComponent<Rigidbody2D>().velocity = directiontocat * 50f;
-
-                 }    
-                 dosaCounter = 0;
-
-
-             }
-         }
-     }*/
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (dosaCounter <= 4)
+        //if (dosaCounter <= 4)
         {
             if (collision.CompareTag("Dosa"))
             {
                 // Increment the dosa counter when the player touches a dosa.
                 dosaCounter++;
-                dosastothrow++;
-                Debug.Log("Dosa Counter: " + dosaCounter);
-                DosaCounterText.text = "Dosa Count: " + dosaCounter.ToString();
+                
+                //Debug.Log("Dosa Counter: " + dosaCounter);
+                
             }
         }
 

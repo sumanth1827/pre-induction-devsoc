@@ -48,7 +48,7 @@ public class DosaThrower : MonoBehaviour
             randomPosition = new Vector2(Random.Range(throwRegionMin.x, throwRegionMax.x),
                                      Random.Range(throwRegionMin.y, throwRegionMax.y));
             throwDirection = (randomPosition - (Vector2)throwPoint.position).normalized;
-            Debug.Log("wtfisthisshit");
+            
         } while (throwDirection == lastThrowDirection); // Keep generating until it's not the same as the last throw direction
 
         lastThrowDirection = throwDirection; // Store the current throw direction as the last direction
