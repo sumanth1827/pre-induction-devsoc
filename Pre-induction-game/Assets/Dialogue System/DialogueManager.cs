@@ -45,6 +45,7 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation.");
         freezer.instance.UnfreezeScene();
         imageToToggle.gameObject.SetActive(false);
+        pausemenu.instance.canbepaued = true;
 
     }
 

@@ -52,7 +52,7 @@ public class playermovement : MonoBehaviour
 
     public bool alive = true;
     [SerializeField] bool allowpaperball = false;
-
+   
    
     // Start is called before the first frame update
     private void Awake()
@@ -79,7 +79,7 @@ public class playermovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Time.timeScale);
+        
         if (isdashing)
         {
             return;
@@ -158,6 +158,7 @@ public class playermovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+       
         if (isdashing)
         {
             return;

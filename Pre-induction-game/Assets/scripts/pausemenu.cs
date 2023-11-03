@@ -7,25 +7,38 @@ public class pausemenu : MonoBehaviour
 {
     public GameObject PauseMenu;
     public bool isPaused;
+    public static pausemenu instance;
+    public bool canbepaued = false;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        instance = this;
+        //instance.enabled = false;
+    }
     void Start()
     {
         PauseMenu.SetActive(false);
-        Time.timeScale=1f;
-    }
+        //Time.timeScale=1f;
+       canbepaued = false;
+
+}
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(canbepaued)
         {
-            if(isPaused)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ResumeGame();
+                if (isPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                    PauseGame();
             }
-            else 
-            PauseGame();
         }
+
         
     }
     public void PauseGame()
