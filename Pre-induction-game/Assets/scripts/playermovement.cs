@@ -70,6 +70,7 @@ public class playermovement : MonoBehaviour
     }
     void Start()
     {
+        Time.timeScale = 0f;
         instance = this;
         launchbar.UpdateHealthBar(0f, true);
     }
