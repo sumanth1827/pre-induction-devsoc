@@ -10,7 +10,7 @@ public class dogenemy : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
     Vector2 distance;
-    float speed = 17f;
+    float speed = 25f;
     SpriteRenderer sprite;
     [SerializeField] float jumpforce = 15f;
     float minchasedist = 25f;
@@ -35,7 +35,7 @@ public class dogenemy : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(24f, 28f);
+        speed = Random.Range(28f, 32f);
 
     }
 
