@@ -2715,7 +2715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restingTime: 15
-  movementSpeed: 0.21
+  movementSpeed: 0.3
   playerTransform: {fileID: 211605418}
   timer: 0
   canvaspart: {fileID: 1544228312}
@@ -24677,8 +24677,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7780265437690168476, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7780265437690168479, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 7780265438462877216, guid: 3db90583452bc4140a4a83abca22980b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1

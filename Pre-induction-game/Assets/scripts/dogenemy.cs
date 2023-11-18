@@ -35,7 +35,7 @@ public class dogenemy : MonoBehaviour
 
     private void Start()
     {
-        speed = Random.Range(28f, 32f);
+        speed = Random.Range(26f, 29f);
 
     }
 
