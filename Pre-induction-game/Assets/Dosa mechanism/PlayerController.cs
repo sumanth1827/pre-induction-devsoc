@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject dosas;
     float disttocat;
     Vector2 directiontocat;
-    
+    public int gpay = 1000;
     bool feedable = true;
+    public static PlayerController instance;
 
     private void Awake()
     {
@@ -22,13 +23,15 @@ public class PlayerController : MonoBehaviour
     {
         // Initialize the dosa counter.
         dosaCounter = 0;
+        gpay = 1000;
+        instance = this;
     }
 
     void Update()
     {
         disttocat = Vector2.Distance(transform.position, catController.transform.position);
         directiontocat = (transform.position - catController.transform.position).normalized;
-        DosaCounterText.text = "Dosas Caught: " + dosaCounter.ToString();
+        DosaCounterText.text = gpay.ToString();
         
 
 
@@ -90,7 +93,7 @@ public class PlayerController : MonoBehaviour
             {
                 // Increment the dosa counter when the player touches a dosa.
                 dosaCounter++;
-                
+                gpay -= 55;
                 //Debug.Log("Dosa Counter: " + dosaCounter);
                 
             }

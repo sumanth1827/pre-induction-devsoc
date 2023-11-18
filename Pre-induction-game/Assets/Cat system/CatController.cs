@@ -110,8 +110,11 @@ public class CatController : MonoBehaviour
 
             dosasFed++;  // Increment the dosas fed to the cat.
                          // timer = Mathf.Max(restingTime - (dosasFed * 2), 2f);// Decrease timer by 2 seconds each time but ensure it's at least 2 seconds.
+            //Vector2 catscale = gameObject.transform.localScale;
+            //catscale.x += 2 * dosacount;
+            //gameObject.transform.localScale = catscale;
             timer -= dosacount*2;
-            if (gametimer >= 35f) // Check if the player has fed 15 dosas.
+            if (PlayerController.instance.gpay <= 0) // Check if the player has fed 15 dosas.
             {
                 canvaspart.SetBool("win", true);
                 hasWon = true; // Set the hasWon flag to true.
