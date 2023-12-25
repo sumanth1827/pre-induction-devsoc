@@ -88,7 +88,7 @@ public class playermovement : MonoBehaviour
             isHit = Physics2D.OverlapCircle(groundcheck2.position, 0.5f, couples);
             if (isHit != null)
             {
-                rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
+                //rb.AddForce(Vector2.up * bounce, ForceMode2D.Impulse);
                 // isHit.gameObject.GetComponent<couples>().hit = true;
             }
             walkInput = Input.GetAxisRaw("Horizontal");
